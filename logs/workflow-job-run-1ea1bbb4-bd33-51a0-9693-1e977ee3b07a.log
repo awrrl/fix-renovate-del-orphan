@@ -1,0 +1,1739 @@
+2026-05-29T09:08:18.3573625Z Current runner version: '2.334.0'
+2026-05-29T09:08:18.3598887Z ##[group]Runner Image Provisioner
+2026-05-29T09:08:18.3599899Z Hosted Compute Agent
+2026-05-29T09:08:18.3600519Z Version: 20260520.533
+2026-05-29T09:08:18.3601398Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+2026-05-29T09:08:18.3602260Z Build Date: 2026-05-20T17:44:04Z
+2026-05-29T09:08:18.3602980Z Worker ID: {b784bd08-6576-4d48-b7a9-d9e20868a269}
+2026-05-29T09:08:18.3603740Z Azure Region: westus
+2026-05-29T09:08:18.3604343Z ##[endgroup]
+2026-05-29T09:08:18.3605887Z ##[group]Operating System
+2026-05-29T09:08:18.3606681Z Ubuntu
+2026-05-29T09:08:18.3607221Z 24.04.4
+2026-05-29T09:08:18.3607728Z LTS
+2026-05-29T09:08:18.3608362Z ##[endgroup]
+2026-05-29T09:08:18.3608959Z ##[group]Runner Image
+2026-05-29T09:08:18.3609641Z Image: ubuntu-24.04
+2026-05-29T09:08:18.3610222Z Version: 20260525.161.1
+2026-05-29T09:08:18.3611820Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-29T09:08:18.3613451Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+2026-05-29T09:08:18.3614501Z ##[endgroup]
+2026-05-29T09:08:18.3615879Z ##[group]GITHUB_TOKEN Permissions
+2026-05-29T09:08:18.3618147Z Actions: read
+2026-05-29T09:08:18.3618788Z Checks: read
+2026-05-29T09:08:18.3619376Z Contents: write
+2026-05-29T09:08:18.3620427Z Metadata: read
+2026-05-29T09:08:18.3621249Z PullRequests: write
+2026-05-29T09:08:18.3621891Z ##[endgroup]
+2026-05-29T09:08:18.3624244Z Secret source: Actions
+2026-05-29T09:08:18.3625054Z Prepare workflow directory
+2026-05-29T09:08:18.3978487Z Prepare all required actions
+2026-05-29T09:08:18.4018227Z Getting action download info
+2026-05-29T09:08:18.9807973Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-29T09:08:19.0860068Z Download action repository 'renovatebot/github-action@v43.0.19' (SHA:a3c115cd6676c8a5bc72f9715f108759e570daf5)
+2026-05-29T09:08:19.6145981Z Complete job name: renovate
+2026-05-29T09:08:19.6914857Z ##[group]Run actions/checkout@v4
+2026-05-29T09:08:19.6915855Z with:
+2026-05-29T09:08:19.6916398Z   repository: awrrl/test-renovate-del-orphan
+2026-05-29T09:08:19.6921560Z   token: ***
+2026-05-29T09:08:19.6922054Z   ssh-strict: true
+2026-05-29T09:08:19.6922542Z   ssh-user: git
+2026-05-29T09:08:19.6923043Z   persist-credentials: true
+2026-05-29T09:08:19.6923573Z   clean: true
+2026-05-29T09:08:19.6924075Z   sparse-checkout-cone-mode: true
+2026-05-29T09:08:19.6924656Z   fetch-depth: 1
+2026-05-29T09:08:19.6925133Z   fetch-tags: false
+2026-05-29T09:08:19.6925631Z   show-progress: true
+2026-05-29T09:08:19.6926130Z   lfs: false
+2026-05-29T09:08:19.6926598Z   submodules: false
+2026-05-29T09:08:19.6927099Z   set-safe-directory: true
+2026-05-29T09:08:19.6927927Z ##[endgroup]
+2026-05-29T09:08:19.8111246Z Syncing repository: awrrl/test-renovate-del-orphan
+2026-05-29T09:08:19.8113962Z ##[group]Getting Git version info
+2026-05-29T09:08:19.8115079Z Working directory is '/home/runner/work/test-renovate-del-orphan/test-renovate-del-orphan'
+2026-05-29T09:08:19.8116952Z [command]/usr/bin/git version
+2026-05-29T09:08:19.8167230Z git version 2.54.0
+2026-05-29T09:08:19.8194679Z ##[endgroup]
+2026-05-29T09:08:19.8218910Z Temporarily overriding HOME='/home/runner/work/_temp/cbec66f4-aa50-4e49-b514-c770b55d5be6' before making global git config changes
+2026-05-29T09:08:19.8221674Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-29T09:08:19.8224563Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test-renovate-del-orphan/test-renovate-del-orphan
+2026-05-29T09:08:19.8273301Z Deleting the contents of '/home/runner/work/test-renovate-del-orphan/test-renovate-del-orphan'
+2026-05-29T09:08:19.8276897Z ##[group]Initializing the repository
+2026-05-29T09:08:19.8281385Z [command]/usr/bin/git init /home/runner/work/test-renovate-del-orphan/test-renovate-del-orphan
+2026-05-29T09:08:19.8366519Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-29T09:08:19.8368917Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-29T09:08:19.8370380Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-29T09:08:19.8371578Z hint: call:
+2026-05-29T09:08:19.8372461Z hint:
+2026-05-29T09:08:19.8373638Z hint: 	git config --global init.defaultBranch <name>
+2026-05-29T09:08:19.8374964Z hint:
+2026-05-29T09:08:19.8376186Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-29T09:08:19.8377689Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-29T09:08:19.8379351Z hint:
+2026-05-29T09:08:19.8380229Z hint: 	git branch -m <name>
+2026-05-29T09:08:19.8381459Z hint:
+2026-05-29T09:08:19.8382589Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-29T09:08:19.8384713Z Initialized empty Git repository in /home/runner/work/test-renovate-del-orphan/test-renovate-del-orphan/.git/
+2026-05-29T09:08:19.8387393Z [command]/usr/bin/git remote add origin https://github.com/awrrl/test-renovate-del-orphan
+2026-05-29T09:08:19.8429521Z ##[endgroup]
+2026-05-29T09:08:19.8434508Z ##[group]Disabling automatic garbage collection
+2026-05-29T09:08:19.8435295Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-29T09:08:19.8465337Z ##[endgroup]
+2026-05-29T09:08:19.8466148Z ##[group]Setting up auth
+2026-05-29T09:08:19.8472736Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-29T09:08:19.8507415Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-29T09:08:19.8851052Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-29T09:08:19.8882043Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-29T09:08:19.9101875Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-29T09:08:19.9137260Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-29T09:08:19.9367504Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-29T09:08:19.9404849Z ##[endgroup]
+2026-05-29T09:08:19.9405781Z ##[group]Fetching the repository
+2026-05-29T09:08:19.9414335Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8:refs/remotes/origin/main/develop
+2026-05-29T09:08:20.3469840Z From https://github.com/awrrl/test-renovate-del-orphan
+2026-05-29T09:08:20.3472670Z  * [new ref]         b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8 -> origin/main/develop
+2026-05-29T09:08:20.3507037Z ##[endgroup]
+2026-05-29T09:08:20.3508674Z ##[group]Determining the checkout info
+2026-05-29T09:08:20.3510197Z ##[endgroup]
+2026-05-29T09:08:20.3514124Z [command]/usr/bin/git sparse-checkout disable
+2026-05-29T09:08:20.3557684Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-29T09:08:20.3584177Z ##[group]Checking out the ref
+2026-05-29T09:08:20.3587341Z [command]/usr/bin/git checkout --progress --force -B main/develop refs/remotes/origin/main/develop
+2026-05-29T09:08:20.3634660Z Switched to a new branch 'main/develop'
+2026-05-29T09:08:20.3637937Z branch 'main/develop' set up to track 'origin/main/develop'.
+2026-05-29T09:08:20.3646810Z ##[endgroup]
+2026-05-29T09:08:20.3683433Z [command]/usr/bin/git log -1 --format=%H
+2026-05-29T09:08:20.3705386Z b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8
+2026-05-29T09:08:20.4037742Z ##[group]Run renovatebot/github-action@v43.0.19
+2026-05-29T09:08:20.4039164Z with:
+2026-05-29T09:08:20.4040084Z   configurationFile: renovate.json
+2026-05-29T09:08:20.4053130Z   token: ***
+2026-05-29T09:08:20.4054063Z   renovate-version: 41
+2026-05-29T09:08:20.4055210Z   renovate-image: ghcr.io/renovatebot/renovate
+2026-05-29T09:08:20.4056703Z   docker-socket-host-path: /var/run/docker.sock
+2026-05-29T09:08:20.4058091Z   docker-volumes: /tmp:/tmp
+2026-05-29T09:08:20.4059318Z env:
+2026-05-29T09:08:20.4060330Z   LOG_LEVEL: debug
+2026-05-29T09:08:20.4061660Z   RENOVATE_AUTODISCOVER: true
+2026-05-29T09:08:20.4063099Z   RENOVATE_REPOSITORIES: awrrl/test-renovate-del-orphan
+2026-05-29T09:08:20.4064581Z   RENOVATE_DRY_RUN: false
+2026-05-29T09:08:20.4065605Z ##[endgroup]
+2026-05-29T09:08:20.4898968Z [command]/usr/bin/docker run --env LOG_LEVEL --env RENOVATE_AUTODISCOVER --env RENOVATE_REPOSITORIES --env RENOVATE_DRY_RUN --env RENOVATE_TOKEN=*** --env RENOVATE_CONFIG_FILE=/github-action/renovate.json --volume /home/runner/work/test-renovate-del-orphan/test-renovate-del-orphan/renovate.json:/github-action/renovate.json --volume /tmp:/tmp --rm ghcr.io/renovatebot/renovate:41
+2026-05-29T09:08:20.5958107Z Unable to find image 'ghcr.io/renovatebot/renovate:41' locally
+2026-05-29T09:08:21.3849068Z 41: Pulling from renovatebot/renovate
+2026-05-29T09:08:21.5724165Z 4b3ffd8ccb52: Pulling fs layer
+2026-05-29T09:08:21.5726806Z aedac9488808: Pulling fs layer
+2026-05-29T09:08:21.5728638Z 7fd284bede34: Pulling fs layer
+2026-05-29T09:08:21.5730679Z e1e9a6e23660: Pulling fs layer
+2026-05-29T09:08:21.5733151Z 1318f5456244: Pulling fs layer
+2026-05-29T09:08:21.5735114Z 2a60a08a392a: Pulling fs layer
+2026-05-29T09:08:21.5736628Z 3257f20867cb: Pulling fs layer
+2026-05-29T09:08:21.5737697Z b393039c7111: Pulling fs layer
+2026-05-29T09:08:21.5738768Z cdb9316281ba: Pulling fs layer
+2026-05-29T09:08:21.5739842Z 0571420b93d6: Pulling fs layer
+2026-05-29T09:08:21.5741357Z a435f3dd1016: Pulling fs layer
+2026-05-29T09:08:21.5742817Z f4dbb82278c6: Pulling fs layer
+2026-05-29T09:08:21.5744105Z 4f4fb700ef54: Pulling fs layer
+2026-05-29T09:08:21.5745458Z b393039c7111: Waiting
+2026-05-29T09:08:21.5746709Z cdb9316281ba: Waiting
+2026-05-29T09:08:21.5748297Z 0571420b93d6: Waiting
+2026-05-29T09:08:21.5749422Z a435f3dd1016: Waiting
+2026-05-29T09:08:21.5750523Z f4dbb82278c6: Waiting
+2026-05-29T09:08:21.5752121Z 4f4fb700ef54: Waiting
+2026-05-29T09:08:21.5753228Z e1e9a6e23660: Waiting
+2026-05-29T09:08:21.5754312Z 1318f5456244: Waiting
+2026-05-29T09:08:21.5755391Z 2a60a08a392a: Waiting
+2026-05-29T09:08:21.5756732Z 3257f20867cb: Waiting
+2026-05-29T09:08:21.7510158Z aedac9488808: Download complete
+2026-05-29T09:08:21.8454319Z 4b3ffd8ccb52: Verifying Checksum
+2026-05-29T09:08:21.8457555Z 4b3ffd8ccb52: Download complete
+2026-05-29T09:08:21.8714377Z 7fd284bede34: Verifying Checksum
+2026-05-29T09:08:21.8719792Z 7fd284bede34: Download complete
+2026-05-29T09:08:22.1201579Z 1318f5456244: Verifying Checksum
+2026-05-29T09:08:22.1202381Z 1318f5456244: Download complete
+2026-05-29T09:08:22.2674631Z e1e9a6e23660: Verifying Checksum
+2026-05-29T09:08:22.2676116Z e1e9a6e23660: Download complete
+2026-05-29T09:08:22.4676792Z b393039c7111: Verifying Checksum
+2026-05-29T09:08:22.4677784Z b393039c7111: Download complete
+2026-05-29T09:08:22.6555647Z cdb9316281ba: Verifying Checksum
+2026-05-29T09:08:22.6558064Z cdb9316281ba: Download complete
+2026-05-29T09:08:22.7206413Z 3257f20867cb: Download complete
+2026-05-29T09:08:22.7508377Z 2a60a08a392a: Verifying Checksum
+2026-05-29T09:08:22.7509127Z 2a60a08a392a: Download complete
+2026-05-29T09:08:22.9095391Z a435f3dd1016: Verifying Checksum
+2026-05-29T09:08:22.9096590Z a435f3dd1016: Download complete
+2026-05-29T09:08:22.9619925Z f4dbb82278c6: Verifying Checksum
+2026-05-29T09:08:22.9620488Z f4dbb82278c6: Download complete
+2026-05-29T09:08:23.0671675Z 4f4fb700ef54: Verifying Checksum
+2026-05-29T09:08:23.0673031Z 4f4fb700ef54: Download complete
+2026-05-29T09:08:23.1665559Z 0571420b93d6: Verifying Checksum
+2026-05-29T09:08:23.1667075Z 0571420b93d6: Download complete
+2026-05-29T09:08:23.2416487Z 4b3ffd8ccb52: Pull complete
+2026-05-29T09:08:25.2168456Z aedac9488808: Pull complete
+2026-05-29T09:08:25.6066151Z 7fd284bede34: Pull complete
+2026-05-29T09:08:26.1882514Z e1e9a6e23660: Pull complete
+2026-05-29T09:08:27.0503648Z 1318f5456244: Pull complete
+2026-05-29T09:08:33.6638376Z 2a60a08a392a: Pull complete
+2026-05-29T09:08:33.8794956Z 3257f20867cb: Pull complete
+2026-05-29T09:08:33.8940335Z b393039c7111: Pull complete
+2026-05-29T09:08:33.9077117Z cdb9316281ba: Pull complete
+2026-05-29T09:08:47.1726612Z 0571420b93d6: Pull complete
+2026-05-29T09:08:47.1891340Z a435f3dd1016: Pull complete
+2026-05-29T09:08:47.1986955Z f4dbb82278c6: Pull complete
+2026-05-29T09:08:47.2074749Z 4f4fb700ef54: Pull complete
+2026-05-29T09:08:47.2118681Z Digest: sha256:e998e1218fe572e23278d8808186a310784f7cb2ac8055307183ffc51d3a59e5
+2026-05-29T09:08:47.2129922Z Status: Downloaded newer image for ghcr.io/renovatebot/renovate:41
+2026-05-29T09:08:47.5357761Z [09:08:47.517] DEBUG (8): discovered distro
+2026-05-29T09:08:47.5358552Z     distro: {
+2026-05-29T09:08:47.5359345Z       "name": "Ubuntu",
+2026-05-29T09:08:47.5360063Z       "versionCode": "noble",
+2026-05-29T09:08:47.5361186Z       "versionId": "24.04"
+2026-05-29T09:08:47.5362098Z     }
+2026-05-29T09:08:47.5374408Z [09:08:47.518] DEBUG (8): prepare commands
+2026-05-29T09:08:47.5377402Z [09:08:47.528] INFO (8): Initializing tools all...
+2026-05-29T09:08:47.5453147Z [09:08:47.542] DEBUG (8): creating dir
+2026-05-29T09:08:47.5453905Z     path: "/tmp/containerbase"
+2026-05-29T09:08:47.5475084Z [09:08:47.542] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5476250Z     path: "/tmp/containerbase"
+2026-05-29T09:08:47.5476683Z     mode: 509
+2026-05-29T09:08:47.5477016Z     s: 493
+2026-05-29T09:08:47.5477348Z [09:08:47.542] DEBUG (8): creating dir
+2026-05-29T09:08:47.5477858Z     path: "/tmp/containerbase/tool.init.d"
+2026-05-29T09:08:47.5478391Z [09:08:47.542] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5571716Z     path: "/tmp/containerbase/tool.init.d"
+2026-05-29T09:08:47.5572327Z     mode: 509
+2026-05-29T09:08:47.5572687Z     s: 493
+2026-05-29T09:08:47.5573033Z [09:08:47.543] DEBUG (8): creating dir
+2026-05-29T09:08:47.5573541Z     path: "/tmp/containerbase/cache"
+2026-05-29T09:08:47.5574059Z [09:08:47.543] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5574634Z     path: "/tmp/containerbase/cache"
+2026-05-29T09:08:47.5575105Z     mode: 509
+2026-05-29T09:08:47.5575448Z     s: 493
+2026-05-29T09:08:47.5575795Z [09:08:47.543] DEBUG (8): creating dir
+2026-05-29T09:08:47.5576287Z     path: "/tmp/containerbase/cache/.cache"
+2026-05-29T09:08:47.5576804Z [09:08:47.543] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5577590Z     path: "/tmp/containerbase/cache/.cache"
+2026-05-29T09:08:47.5578063Z     mode: 509
+2026-05-29T09:08:47.5578377Z     s: 493
+2026-05-29T09:08:47.5578704Z [09:08:47.543] DEBUG (8): creating dir
+2026-05-29T09:08:47.5579191Z     path: "/tmp/containerbase/cache/.config"
+2026-05-29T09:08:47.5579716Z [09:08:47.543] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5580221Z     path: "/tmp/containerbase/cache/.config"
+2026-05-29T09:08:47.5581874Z     mode: 509
+2026-05-29T09:08:47.5582260Z     s: 493
+2026-05-29T09:08:47.5582608Z [09:08:47.544] DEBUG (8): creating dir
+2026-05-29T09:08:47.5584665Z     path: "/tmp/containerbase/cache/.local"
+2026-05-29T09:08:47.5585190Z [09:08:47.544] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5585802Z     path: "/tmp/containerbase/cache/.local"
+2026-05-29T09:08:47.5586255Z     mode: 509
+2026-05-29T09:08:47.5586640Z     s: 493
+2026-05-29T09:08:47.5586962Z [09:08:47.544] DEBUG (8): creating dir
+2026-05-29T09:08:47.5589190Z     path: "/tmp/containerbase/cache/.local/share"
+2026-05-29T09:08:47.5590257Z [09:08:47.544] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5591066Z     path: "/tmp/containerbase/cache/.local/share"
+2026-05-29T09:08:47.5591576Z     mode: 509
+2026-05-29T09:08:47.5591907Z     s: 493
+2026-05-29T09:08:47.5592239Z [09:08:47.546] DEBUG (8): initialize tool
+2026-05-29T09:08:47.5593025Z     tool: "conan"
+2026-05-29T09:08:47.5593412Z [09:08:47.548] DEBUG (8): creating dir
+2026-05-29T09:08:47.5593895Z     path: "/tmp/containerbase/cache/.conan2"
+2026-05-29T09:08:47.5594633Z [09:08:47.548] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5595138Z     path: "/tmp/containerbase/cache/.conan2"
+2026-05-29T09:08:47.5595613Z     mode: 509
+2026-05-29T09:08:47.5595922Z     s: 493
+2026-05-29T09:08:47.5596243Z [09:08:47.548] DEBUG (8): creating dir
+2026-05-29T09:08:47.5596771Z     path: "/tmp/containerbase/cache/.conan2/profiles"
+2026-05-29T09:08:47.5597320Z [09:08:47.548] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5597870Z     path: "/tmp/containerbase/cache/.conan2/profiles"
+2026-05-29T09:08:47.5598702Z     mode: 509
+2026-05-29T09:08:47.5599050Z     s: 493
+2026-05-29T09:08:47.5599688Z [09:08:47.549] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5600297Z     path: "/tmp/containerbase/cache/.conan2/profiles/default"
+2026-05-29T09:08:47.5601042Z     mode: 436
+2026-05-29T09:08:47.5601387Z     s: 420
+2026-05-29T09:08:47.5601723Z [09:08:47.551] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5602230Z     path: "/tmp/containerbase/tool.init.d/conan"
+2026-05-29T09:08:47.5602728Z     mode: 509
+2026-05-29T09:08:47.5603056Z     s: 420
+2026-05-29T09:08:47.5603451Z [09:08:47.551] DEBUG (8): initialize tool
+2026-05-29T09:08:47.5603821Z     tool: "dart"
+2026-05-29T09:08:47.5604031Z [09:08:47.551] DEBUG (8): creating dir
+2026-05-29T09:08:47.5604319Z     path: "/tmp/containerbase/cache/.dart"
+2026-05-29T09:08:47.5604621Z [09:08:47.551] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5604902Z     path: "/tmp/containerbase/cache/.dart"
+2026-05-29T09:08:47.5605155Z     mode: 509
+2026-05-29T09:08:47.5605339Z     s: 493
+2026-05-29T09:08:47.5605521Z [09:08:47.552] DEBUG (8): creating dir
+2026-05-29T09:08:47.5605799Z     path: "/tmp/containerbase/cache/.dart-tool"
+2026-05-29T09:08:47.5606113Z [09:08:47.552] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5606415Z     path: "/tmp/containerbase/cache/.dart-tool"
+2026-05-29T09:08:47.5606693Z     mode: 509
+2026-05-29T09:08:47.5606876Z     s: 493
+2026-05-29T09:08:47.5607085Z [09:08:47.553] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5608534Z     path: "/tmp/containerbase/cache/.dart/dartdev.json"
+2026-05-29T09:08:47.5609415Z     mode: 436
+2026-05-29T09:08:47.5609634Z     s: 420
+2026-05-29T09:08:47.5609967Z [09:08:47.554] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5610649Z     path: "/tmp/containerbase/cache/.dart-tool/dart-flutter-telemetry.config"
+2026-05-29T09:08:47.5611463Z     mode: 436
+2026-05-29T09:08:47.5611846Z     s: 420
+2026-05-29T09:08:47.5612204Z [09:08:47.554] DEBUG (8): creating dir
+2026-05-29T09:08:47.5612701Z     path: "/tmp/containerbase/cache/.pub-cache"
+2026-05-29T09:08:47.5613312Z [09:08:47.554] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5613889Z     path: "/tmp/containerbase/cache/.pub-cache"
+2026-05-29T09:08:47.5614380Z     mode: 509
+2026-05-29T09:08:47.5614687Z     s: 493
+2026-05-29T09:08:47.5615028Z [09:08:47.554] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5615531Z     path: "/tmp/containerbase/tool.init.d/dart"
+2026-05-29T09:08:47.5616006Z     mode: 509
+2026-05-29T09:08:47.5616308Z     s: 420
+2026-05-29T09:08:47.5616571Z [09:08:47.555] DEBUG (8): initialize tool
+2026-05-29T09:08:47.5616834Z     tool: "dotnet"
+2026-05-29T09:08:47.5617066Z [09:08:47.556] DEBUG (8): creating dir
+2026-05-29T09:08:47.5617335Z     path: "/tmp/containerbase/cache/.nuget"
+2026-05-29T09:08:47.5617616Z [09:08:47.557] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5617888Z     path: "/tmp/containerbase/cache/.nuget"
+2026-05-29T09:08:47.5618160Z     mode: 509
+2026-05-29T09:08:47.5618340Z     s: 493
+2026-05-29T09:08:47.5618531Z [09:08:47.557] DEBUG (8): creating dir
+2026-05-29T09:08:47.5618822Z     path: "/tmp/containerbase/cache/.nuget/NuGet"
+2026-05-29T09:08:47.5619129Z [09:08:47.558] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5619421Z     path: "/tmp/containerbase/cache/.nuget/NuGet"
+2026-05-29T09:08:47.5619698Z     mode: 509
+2026-05-29T09:08:47.5620087Z     s: 493
+2026-05-29T09:08:47.5620295Z [09:08:47.559] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5620599Z     path: "/tmp/containerbase/tool.init.d/dotnet"
+2026-05-29T09:08:47.5621395Z     mode: 509
+2026-05-29T09:08:47.5621588Z     s: 420
+2026-05-29T09:08:47.5621954Z [09:08:47.559] DEBUG (8): initialize tool
+2026-05-29T09:08:47.5622430Z     tool: "docker"
+2026-05-29T09:08:47.5622806Z [09:08:47.559] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5623324Z     path: "/tmp/containerbase/tool.init.d/docker"
+2026-05-29T09:08:47.5623811Z     mode: 509
+2026-05-29T09:08:47.5624110Z     s: 420
+2026-05-29T09:08:47.5624437Z [09:08:47.559] DEBUG (8): initialize tool
+2026-05-29T09:08:47.5624871Z     tool: "elixir"
+2026-05-29T09:08:47.5686243Z [09:08:47.560] DEBUG (8): Initializing v2 tool elixir ...
+2026-05-29T09:08:47.5857215Z [09:08:47.580] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5861466Z     path: "/tmp/containerbase/tool.init.d/elixir"
+2026-05-29T09:08:47.5861838Z     mode: 509
+2026-05-29T09:08:47.5862041Z     s: 420
+2026-05-29T09:08:47.5862445Z [09:08:47.580] DEBUG (8): tool does not need to be initialized
+2026-05-29T09:08:47.5862857Z     tool: "erlang"
+2026-05-29T09:08:47.5863108Z [09:08:47.580] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5863439Z     path: "/tmp/containerbase/tool.init.d/erlang"
+2026-05-29T09:08:47.5863744Z     mode: 509
+2026-05-29T09:08:47.5863935Z     s: 420
+2026-05-29T09:08:47.5864141Z [09:08:47.580] DEBUG (8): initialize tool
+2026-05-29T09:08:47.5864424Z     tool: "flutter"
+2026-05-29T09:08:47.5864662Z [09:08:47.581] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5864982Z     path: "/tmp/containerbase/cache/.flutter"
+2026-05-29T09:08:47.5865273Z     mode: 436
+2026-05-29T09:08:47.5865460Z     s: 420
+2026-05-29T09:08:47.5865662Z [09:08:47.581] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5865998Z     path: "/tmp/containerbase/cache/.flutter_tool_state"
+2026-05-29T09:08:47.5866313Z     mode: 436
+2026-05-29T09:08:47.5866502Z     s: 420
+2026-05-29T09:08:47.5866716Z [09:08:47.581] DEBUG (8): setting path mode
+2026-05-29T09:08:47.5867050Z     path: "/tmp/containerbase/tool.init.d/flutter"
+2026-05-29T09:08:47.5867355Z     mode: 509
+2026-05-29T09:08:47.5867552Z     s: 420
+2026-05-29T09:08:47.5867755Z [09:08:47.581] DEBUG (8): initialize tool
+2026-05-29T09:08:47.5868027Z     tool: "golang"
+2026-05-29T09:08:47.5868291Z [09:08:47.582] DEBUG (8): Initializing v2 tool golang ...
+2026-05-29T09:08:47.6186205Z [09:08:47.603] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6187186Z     path: "/tmp/containerbase/tool.init.d/golang"
+2026-05-29T09:08:47.6187731Z     mode: 509
+2026-05-29T09:08:47.6188069Z     s: 420
+2026-05-29T09:08:47.6198794Z [09:08:47.603] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6199394Z     tool: "java"
+2026-05-29T09:08:47.6199814Z [09:08:47.604] DEBUG (8): creating dir
+2026-05-29T09:08:47.6200310Z     path: "/tmp/containerbase/cache/.m2"
+2026-05-29T09:08:47.6200912Z [09:08:47.604] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6201389Z     path: "/tmp/containerbase/cache/.m2"
+2026-05-29T09:08:47.6201650Z     mode: 509
+2026-05-29T09:08:47.6201837Z     s: 493
+2026-05-29T09:08:47.6202055Z [09:08:47.604] DEBUG (8): Creating Maven settings
+2026-05-29T09:08:47.6202379Z [09:08:47.604] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6202704Z     path: "/tmp/containerbase/cache/.m2/settings.xml"
+2026-05-29T09:08:47.6202999Z     mode: 436
+2026-05-29T09:08:47.6203179Z     s: 420
+2026-05-29T09:08:47.6203367Z [09:08:47.605] DEBUG (8): creating dir
+2026-05-29T09:08:47.6203644Z     path: "/tmp/containerbase/cache/.gradle"
+2026-05-29T09:08:47.6203938Z [09:08:47.605] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6204233Z     path: "/tmp/containerbase/cache/.gradle"
+2026-05-29T09:08:47.6204499Z     mode: 509
+2026-05-29T09:08:47.6204679Z     s: 493
+2026-05-29T09:08:47.6204895Z [09:08:47.605] DEBUG (8): Creating Gradle settings
+2026-05-29T09:08:47.6205202Z [09:08:47.605] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6205790Z     path: "/tmp/containerbase/cache/.gradle/gradle.properties"
+2026-05-29T09:08:47.6206130Z     mode: 436
+2026-05-29T09:08:47.6206311Z     s: 420
+2026-05-29T09:08:47.6206507Z [09:08:47.606] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6206935Z     path: "/tmp/containerbase/tool.init.d/java"
+2026-05-29T09:08:47.6207209Z     mode: 509
+2026-05-29T09:08:47.6207387Z     s: 420
+2026-05-29T09:08:47.6207577Z [09:08:47.606] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6207837Z     tool: "java-jre"
+2026-05-29T09:08:47.6208107Z [09:08:47.606] DEBUG (8): Maven settings already found
+2026-05-29T09:08:47.6208446Z [09:08:47.606] DEBUG (8): Gradle settings already found
+2026-05-29T09:08:47.6208751Z [09:08:47.606] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6209052Z     path: "/tmp/containerbase/tool.init.d/java-jre"
+2026-05-29T09:08:47.6209334Z     mode: 509
+2026-05-29T09:08:47.6209510Z     s: 420
+2026-05-29T09:08:47.6209701Z [09:08:47.606] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6209977Z     tool: "java-jdk"
+2026-05-29T09:08:47.6210226Z [09:08:47.607] DEBUG (8): Maven settings already found
+2026-05-29T09:08:47.6210556Z [09:08:47.607] DEBUG (8): Gradle settings already found
+2026-05-29T09:08:47.6211175Z [09:08:47.607] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6211484Z     path: "/tmp/containerbase/tool.init.d/java-jdk"
+2026-05-29T09:08:47.6211770Z     mode: 509
+2026-05-29T09:08:47.6211950Z     s: 420
+2026-05-29T09:08:47.6212140Z [09:08:47.607] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6212387Z     tool: "node"
+2026-05-29T09:08:47.6212592Z [09:08:47.607] DEBUG (8): creating dir
+2026-05-29T09:08:47.6212855Z     path: "/tmp/containerbase/cache/.npm"
+2026-05-29T09:08:47.6213126Z [09:08:47.607] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6213402Z     path: "/tmp/containerbase/cache/.npm"
+2026-05-29T09:08:47.6213658Z     mode: 509
+2026-05-29T09:08:47.6213837Z     s: 493
+2026-05-29T09:08:47.6214032Z [09:08:47.608] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6214316Z     path: "/tmp/containerbase/cache/.npmrc"
+2026-05-29T09:08:47.6214589Z     mode: 436
+2026-05-29T09:08:47.6214767Z     s: 420
+2026-05-29T09:08:47.6214962Z [09:08:47.608] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6215247Z     path: "/tmp/containerbase/tool.init.d/node"
+2026-05-29T09:08:47.6215522Z     mode: 509
+2026-05-29T09:08:47.6215698Z     s: 420
+2026-05-29T09:08:47.6215885Z [09:08:47.608] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6216134Z     tool: "php"
+2026-05-29T09:08:47.6216337Z [09:08:47.608] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6216624Z     path: "/tmp/containerbase/tool.init.d/php"
+2026-05-29T09:08:47.6216892Z     mode: 509
+2026-05-29T09:08:47.6217067Z     s: 420
+2026-05-29T09:08:47.6217307Z [09:08:47.608] DEBUG (8): tool does not need to be initialized
+2026-05-29T09:08:47.6217627Z     tool: "powershell"
+2026-05-29T09:08:47.6217851Z [09:08:47.609] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6218152Z     path: "/tmp/containerbase/tool.init.d/powershell"
+2026-05-29T09:08:47.6218446Z     mode: 509
+2026-05-29T09:08:47.6218627Z     s: 420
+2026-05-29T09:08:47.6218866Z [09:08:47.609] DEBUG (8): tool does not need to be initialized
+2026-05-29T09:08:47.6219184Z     tool: "python"
+2026-05-29T09:08:47.6219399Z [09:08:47.609] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6219703Z     path: "/tmp/containerbase/tool.init.d/python"
+2026-05-29T09:08:47.6219981Z     mode: 509
+2026-05-29T09:08:47.6220160Z     s: 420
+2026-05-29T09:08:47.6220350Z [09:08:47.609] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6220600Z     tool: "ruby"
+2026-05-29T09:08:47.6221232Z [09:08:47.609] DEBUG (8): Initializing v2 tool ruby ...
+2026-05-29T09:08:47.6515207Z [09:08:47.634] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6515824Z     path: "/tmp/containerbase/tool.init.d/ruby"
+2026-05-29T09:08:47.6517832Z     mode: 509
+2026-05-29T09:08:47.6518707Z     s: 420
+2026-05-29T09:08:47.6522052Z [09:08:47.634] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6522731Z     tool: "rust"
+2026-05-29T09:08:47.6523026Z [09:08:47.635] DEBUG (8): Initializing v2 tool rust ...
+2026-05-29T09:08:47.6523768Z [09:08:47.646] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6524124Z     path: "/tmp/containerbase/tool.init.d/rust"
+2026-05-29T09:08:47.6524423Z     mode: 509
+2026-05-29T09:08:47.6524758Z     s: 420
+2026-05-29T09:08:47.6524957Z [09:08:47.646] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6525214Z     tool: "sbt"
+2026-05-29T09:08:47.6525462Z [09:08:47.646] DEBUG (8): Initializing v2 tool sbt ...
+2026-05-29T09:08:47.6679605Z [09:08:47.659] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6680453Z     path: "/tmp/containerbase/tool.init.d/sbt"
+2026-05-29T09:08:47.6681723Z     mode: 509
+2026-05-29T09:08:47.6682118Z     s: 420
+2026-05-29T09:08:47.6682659Z [09:08:47.659] DEBUG (8): initialize tool
+2026-05-29T09:08:47.6683041Z     tool: "swift"
+2026-05-29T09:08:47.6683304Z [09:08:47.659] DEBUG (8): Initializing v2 tool swift ...
+2026-05-29T09:08:47.6755890Z [09:08:47.671] DEBUG (8): setting path mode
+2026-05-29T09:08:47.6756558Z     path: "/tmp/containerbase/tool.init.d/swift"
+2026-05-29T09:08:47.6757283Z     mode: 509
+2026-05-29T09:08:47.6757499Z     s: 420
+2026-05-29T09:08:47.6757787Z [09:08:47.671] INFO (8): Initialize tools all succeded in 143ms.
+2026-05-29T09:08:50.1413506Z DEBUG: Using RE2 regex engine
+2026-05-29T09:08:50.1420468Z DEBUG: Parsing configs
+2026-05-29T09:08:50.1443337Z DEBUG: Checking for config file in /github-action/renovate.json
+2026-05-29T09:08:50.1509876Z  WARN: Config needs migrating
+2026-05-29T09:08:50.1510469Z        "configType": "/github-action/renovate.json",
+2026-05-29T09:08:50.1511278Z        "originalConfig": {
+2026-05-29T09:08:50.1511931Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:50.1512812Z          "baseBranches": ["main/develop"],
+2026-05-29T09:08:50.1513304Z          "branchPrefix": "",
+2026-05-29T09:08:50.1513768Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:50.1514540Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+2026-05-29T09:08:50.1515332Z        },
+2026-05-29T09:08:50.1515663Z        "migratedConfig": {
+2026-05-29T09:08:50.1516178Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:50.1516810Z          "baseBranchPatterns": ["main/develop"],
+2026-05-29T09:08:50.1517315Z          "branchPrefix": "",
+2026-05-29T09:08:50.1517772Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:50.1518543Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+2026-05-29T09:08:50.1519296Z        }
+2026-05-29T09:08:50.1611877Z  WARN: Config validation warnings found
+2026-05-29T09:08:50.1612524Z        "configType": "/github-action/renovate.json",
+2026-05-29T09:08:50.1613090Z        "warnings": [
+2026-05-29T09:08:50.1613455Z          {
+2026-05-29T09:08:50.1613826Z            "topic": "Deprecation Warning",
+2026-05-29T09:08:50.1614918Z            "message": "Direct editing of branchName is now deprecated. Please edit branchPrefix, additionalBranchPrefix, or branchTopic instead"
+2026-05-29T09:08:50.1616146Z          }
+2026-05-29T09:08:50.1616473Z        ]
+2026-05-29T09:08:50.1619604Z DEBUG: No additional config file found specified - skipping
+2026-05-29T09:08:50.1721913Z  WARN: env config dryRun property has been changed to null
+2026-05-29T09:08:50.1749680Z DEBUG: File config
+2026-05-29T09:08:50.1750091Z        "config": {
+2026-05-29T09:08:50.1750663Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:50.1752011Z          "baseBranchPatterns": ["main/develop"],
+2026-05-29T09:08:50.1752561Z          "branchPrefix": "",
+2026-05-29T09:08:50.1753031Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:50.1753833Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+2026-05-29T09:08:50.1754622Z        }
+2026-05-29T09:08:50.1758330Z DEBUG: Additional file config
+2026-05-29T09:08:50.1761883Z        "config": {}
+2026-05-29T09:08:50.1762476Z DEBUG: CLI config
+2026-05-29T09:08:50.1762921Z        "config": {}
+2026-05-29T09:08:50.1763918Z DEBUG: Env config
+2026-05-29T09:08:50.1764370Z        "config": {
+2026-05-29T09:08:50.1764747Z          "hostRules": [],
+2026-05-29T09:08:50.1765157Z          "token": "***********",
+2026-05-29T09:08:50.1766244Z          "autodiscover": true,
+2026-05-29T09:08:50.1766836Z          "repositories": ["awrrl/test-renovate-del-orphan"]
+2026-05-29T09:08:50.1767303Z        }
+2026-05-29T09:08:50.1767537Z DEBUG: Resolved global extends
+2026-05-29T09:08:50.1767827Z        "config": undefined
+2026-05-29T09:08:50.1769275Z DEBUG: Combined config
+2026-05-29T09:08:50.1769691Z        "config": {
+2026-05-29T09:08:50.1770199Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:50.1770888Z          "baseBranchPatterns": ["main/develop"],
+2026-05-29T09:08:50.1771180Z          "branchPrefix": "",
+2026-05-29T09:08:50.1771427Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:50.1771860Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}",
+2026-05-29T09:08:50.1772293Z          "hostRules": [],
+2026-05-29T09:08:50.1772514Z          "token": "***********",
+2026-05-29T09:08:50.1772760Z          "autodiscover": true,
+2026-05-29T09:08:50.1773061Z          "repositories": ["awrrl/test-renovate-del-orphan"]
+2026-05-29T09:08:50.1773370Z        }
+2026-05-29T09:08:50.1907985Z DEBUG: Found valid git version: 2.51.2
+2026-05-29T09:08:50.1908759Z DEBUG: Setting global hostRules
+2026-05-29T09:08:50.1947274Z DEBUG: Using default github endpoint: https://api.github.com/
+2026-05-29T09:08:50.1969077Z DEBUG: hostRules: authentication already set for api.github.com
+2026-05-29T09:08:50.1977885Z DEBUG: Using queue: host=api.github.com, concurrency=16
+2026-05-29T09:08:50.5042711Z DEBUG: Platform config
+2026-05-29T09:08:50.5043376Z        "platformConfig": {
+2026-05-29T09:08:50.5044325Z          "hostType": "github",
+2026-05-29T09:08:50.5044903Z          "endpoint": "https://api.github.com/",
+2026-05-29T09:08:50.5045666Z          "isGHApp": true,
+2026-05-29T09:08:50.5046036Z          "isGhe": false,
+2026-05-29T09:08:50.5046328Z          "userDetails": {
+2026-05-29T09:08:50.5046649Z            "username": "github-actions[bot]",
+2026-05-29T09:08:50.5047044Z            "name": "github-actions[bot]",
+2026-05-29T09:08:50.5047387Z            "id": 41898282
+2026-05-29T09:08:50.5047654Z          }
+2026-05-29T09:08:50.5047876Z        },
+2026-05-29T09:08:50.5048147Z        "renovateUsername": "github-actions[bot]"
+2026-05-29T09:08:50.5048926Z DEBUG: Using platform gitAuthor: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+2026-05-29T09:08:50.5085582Z DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+2026-05-29T09:08:50.5096233Z DEBUG: Using baseDir: /tmp/renovate
+2026-05-29T09:08:50.5100912Z DEBUG: Using cacheDir: /tmp/renovate/cache
+2026-05-29T09:08:50.5104321Z DEBUG: Using containerbaseDir: /tmp/renovate/cache/containerbase
+2026-05-29T09:08:50.5109068Z DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+2026-05-29T09:08:50.5113820Z DEBUG: Commits limit = null
+2026-05-29T09:08:50.5114123Z DEBUG: Setting global hostRules
+2026-05-29T09:08:50.5137270Z DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+2026-05-29T09:08:50.5144174Z DEBUG: validatePresets()
+2026-05-29T09:08:50.5293533Z DEBUG: Autodiscovering GitHub repositories
+2026-05-29T09:08:50.7886822Z DEBUG: Autodiscovered 1 repositories
+2026-05-29T09:08:50.7887538Z  INFO: Autodiscovered repositories
+2026-05-29T09:08:50.7888131Z        "length": 1,
+2026-05-29T09:08:50.7888768Z        "repositories": ["awrrl/test-renovate-del-orphan"]
+2026-05-29T09:08:50.7889751Z DEBUG: Checking autodiscovered repositories against configured repositories
+2026-05-29T09:08:50.7890598Z DEBUG: Using configured repository settings (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:50.7915738Z DEBUG: Reinitializing hostRules for repo
+2026-05-29T09:08:50.7916760Z DEBUG: Clearing hostRules
+2026-05-29T09:08:50.7934319Z DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+2026-05-29T09:08:50.7961523Z  INFO: Repository started (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:50.7962647Z        "renovateVersion": "41.173.1"
+2026-05-29T09:08:50.7966030Z DEBUG: Using localDir: /tmp/renovate/repos/github/awrrl/test-renovate-del-orphan (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:50.7968458Z DEBUG: PackageFiles.clear() - Package files deleted (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:50.7988005Z DEBUG: initRepo("awrrl/test-renovate-del-orphan") (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:50.7993567Z DEBUG: hostRules: authentication already set for api.github.com (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:50.7996385Z DEBUG: Using queue: host=api.github.com, concurrency=16 (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.0848427Z DEBUG: awrrl/test-renovate-del-orphan default branch = main/develop (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.0854806Z DEBUG: Issues cache: Adding 0 issues to reconcile queue (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.0856529Z DEBUG: Using app token for git init (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.0866469Z DEBUG: fetchBranchCommits(): url=https://**redacted**@github.com/awrrl/test-renovate-del-orphan.git (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.4297799Z DEBUG: Resetting npmrc (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.4298561Z DEBUG: Resetting npmrc (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.4302909Z DEBUG: checkOnboarding() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.4306556Z DEBUG: isOnboarded() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.4309693Z DEBUG: findPr(renovate/configure, Configure Renovate, !open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.4314897Z DEBUG: PR cache: cached data not found, creating new cache (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.4317303Z DEBUG: PR cache: initial fetch (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.7452696Z DEBUG: http cache: saving https://api.github.com/repos/awrrl/test-renovate-del-orphan/pulls?per_page=100&state=all&sort=updated&direction=desc&page=1 (etag="762f2649b6e1425bfd845d80d000196c82c78c06679516bef8e2f29fc81b437b", lastModified=undefined) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.7456028Z DEBUG: PR cache: Filtered 0 PRs to 0 (user=github-actions[bot]) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.7458774Z DEBUG: PR cache: getPrList success (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.7459634Z        "pullsTotal": 0,
+2026-05-29T09:08:51.7460131Z        "requestsTotal": 1,
+2026-05-29T09:08:51.7460597Z        "apiQuotaAffected": true
+2026-05-29T09:08:51.7461769Z DEBUG: findPr(renovate/configure, chore: Configure Renovate, !open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.7464305Z DEBUG: findFile(renovate.json) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.7467594Z DEBUG: syncGit(): Initializing git repository into /tmp/renovate/repos/github/awrrl/test-renovate-del-orphan (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:51.7469481Z DEBUG: Performing blobless clone (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.4682518Z DEBUG: git clone completed (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.4683085Z        "durationMs": 721
+2026-05-29T09:08:52.4788705Z DEBUG: latest repository commit (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.4789556Z        "latestCommit": {
+2026-05-29T09:08:52.4790082Z          "hash": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8",
+2026-05-29T09:08:52.4790979Z          "date": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:08:52.4792080Z          "message": "ci: add Renovate workflow (fix branch glob and repository format)",
+2026-05-29T09:08:52.4792953Z          "refs": "HEAD -> main/develop, origin/main/develop, origin/HEAD",
+2026-05-29T09:08:52.4793550Z          "body": "",
+2026-05-29T09:08:52.4794598Z          "author_name": "Götz Lohmann",
+2026-05-29T09:08:52.4795105Z          "author_email": "Goetz.Lohmann@dedalus.com"
+2026-05-29T09:08:52.4795581Z        }
+2026-05-29T09:08:52.4837038Z DEBUG: Current branch SHA: b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8 (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.4887584Z DEBUG: Config file exists, fileName: renovate.json (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.4890573Z DEBUG: Retrieving issueList (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7786787Z DEBUG: Retrieved 0 issues (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7787792Z DEBUG: Issues cache: Setting 0 issues in cache (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7791214Z DEBUG: Repo is onboarded (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7850491Z DEBUG: Found renovate.json config file (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7871969Z DEBUG: Repository config (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7872986Z        "fileName": "renovate.json",
+2026-05-29T09:08:52.7873591Z        "config": {
+2026-05-29T09:08:52.7874148Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:52.7874872Z          "baseBranches": ["main/develop"],
+2026-05-29T09:08:52.7875405Z          "branchPrefix": "",
+2026-05-29T09:08:52.7875898Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:52.7876707Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+2026-05-29T09:08:52.7877468Z        }
+2026-05-29T09:08:52.7877862Z DEBUG: migrateAndValidate() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7892300Z DEBUG: Config migration necessary (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7892994Z        "oldConfig": {
+2026-05-29T09:08:52.7893495Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:52.7894186Z          "baseBranches": ["main/develop"],
+2026-05-29T09:08:52.7894663Z          "branchPrefix": "",
+2026-05-29T09:08:52.7895128Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:52.7895879Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+2026-05-29T09:08:52.7896690Z        },
+2026-05-29T09:08:52.7897020Z        "newConfig": {
+2026-05-29T09:08:52.7897651Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:52.7898353Z          "baseBranchPatterns": ["main/develop"],
+2026-05-29T09:08:52.7898855Z          "branchPrefix": "",
+2026-05-29T09:08:52.7899337Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:52.7900141Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+2026-05-29T09:08:52.7900986Z        }
+2026-05-29T09:08:52.7904509Z DEBUG: Post-massage config (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7905317Z        "config": {
+2026-05-29T09:08:52.7905725Z          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+2026-05-29T09:08:52.7906249Z          "baseBranchPatterns": ["main/develop"],
+2026-05-29T09:08:52.7906628Z          "branchPrefix": "",
+2026-05-29T09:08:52.7906950Z          "additionalBranchPrefix": "",
+2026-05-29T09:08:52.7907504Z          "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+2026-05-29T09:08:52.7908059Z        }
+2026-05-29T09:08:52.7925950Z  WARN: Found renovate config warnings (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.7926672Z        "warnings": [
+2026-05-29T09:08:52.7926981Z          {
+2026-05-29T09:08:52.7927188Z            "topic": "Deprecation Warning",
+2026-05-29T09:08:52.7928299Z            "message": "Direct editing of branchName is now deprecated. Please edit branchPrefix, additionalBranchPrefix, or branchTopic instead"
+2026-05-29T09:08:52.7928918Z          }
+2026-05-29T09:08:52.7929107Z        ]
+2026-05-29T09:08:52.8033492Z DEBUG: Found repo ignorePaths (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.8034843Z        "ignorePaths": ["**/node_modules/**", "**/bower_components/**"]
+2026-05-29T09:08:52.8076588Z DEBUG: No vulnerability alerts enabled for repo (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.8077491Z DEBUG: No vulnerability alerts found (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.8086748Z DEBUG: baseBranches (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:08:52.8087314Z        "baseBranches": ["main/develop"]
+2026-05-29T09:08:52.8092663Z DEBUG: baseBranch: main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8104851Z DEBUG: extract() (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8600525Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8774285Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8775354Z        "branchName": "main/develop",
+2026-05-29T09:08:52.8776262Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:08:52.8777052Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:08:52.8922888Z DEBUG: Using file pattern: /(^|/)tasks/[^/]+\.ya?ml$/ for manager ansible (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8931972Z DEBUG: Using file pattern: /(^|/)(galaxy|requirements)(\.ansible)?\.ya?ml$/ for manager ansible-galaxy (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8941944Z DEBUG: Using file pattern: /(^|/)\.tool-versions$/ for manager asdf (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8949681Z DEBUG: Using file pattern: /(^|/).azuredevops/.+\.ya?ml$/ for manager azure-pipelines (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8952082Z DEBUG: Using file pattern: /azure.*pipelines?.*\.ya?ml$/ for manager azure-pipelines (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8960658Z DEBUG: Using file pattern: /(^|/)batect(-bundle)?\.ya?ml$/ for manager batect (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8967720Z DEBUG: Using file pattern: /(^|/)batect$/ for manager batect-wrapper (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8974567Z DEBUG: Using file pattern: /(^|/)WORKSPACE(|\.bazel|\.bzlmod)$/ for manager bazel (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8988294Z DEBUG: Using file pattern: /\.WORKSPACE\.bazel$/ for manager bazel (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.8989896Z DEBUG: Using file pattern: /\.bzl$/ for manager bazel (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9002540Z DEBUG: Using file pattern: /(^|/|\.)MODULE\.bazel$/ for manager bazel-module (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9005205Z DEBUG: Using file pattern: /(^|/)\.bazelversion$/ for manager bazelisk (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9007115Z DEBUG: Using file pattern: /\.bicep$/ for manager bicep (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9012752Z DEBUG: Using file pattern: /(^|/)\.?bitbucket-pipelines\.ya?ml$/ for manager bitbucket-pipelines (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9021237Z DEBUG: Using file pattern: /(^|/)bitrise\.ya?ml$/ for manager bitrise (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9031597Z DEBUG: Using file pattern: /buildkite\.ya?ml/ for manager buildkite (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9035223Z DEBUG: Using file pattern: /\.buildkite/.+\.ya?ml$/ for manager buildkite (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9041131Z DEBUG: Using file pattern: /(^|/)project\.toml$/ for manager buildpacks (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9052003Z DEBUG: Using file pattern: /(^|/)bun\.lockb?$/ for manager bun (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9053593Z DEBUG: Using file pattern: /(^|/)package\.json$/ for manager bun (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9060363Z DEBUG: Using file pattern: /(^|/)\.bun-version$/ for manager bun-version (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9066629Z DEBUG: Using file pattern: /(^|/)Gemfile$/ for manager bundler (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9080092Z DEBUG: Using file pattern: /\.cake$/ for manager cake (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9102916Z DEBUG: Using file pattern: /(^|/)Cargo\.toml$/ for manager cargo (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9104831Z DEBUG: Using file pattern: /(^|/)\.circleci/.+\.ya?ml$/ for manager circleci (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9107985Z DEBUG: Using file pattern: /(^|/)cloudbuild\.ya?ml/ for manager cloudbuild (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9110153Z DEBUG: Using file pattern: /(^|/)Podfile$/ for manager cocoapods (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9115338Z DEBUG: Using file pattern: /(^|/)([\w-]*)composer\.json$/ for manager composer (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9122037Z DEBUG: Using file pattern: /(^|/)conanfile\.(txt|py)$/ for manager conan (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9129325Z DEBUG: Using file pattern: /(^|/)\.copier-answers(\..+)?\.ya?ml/ for manager copier (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9134463Z DEBUG: Using file pattern: /(^|/)cpanfile$/ for manager cpanfile (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9143613Z DEBUG: Using file pattern: /^\.crow(?:/[^/]+)?\.ya?ml$/ for manager crow (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9149546Z DEBUG: Using file pattern: /(^|/)(?:deps|bb)\.edn$/ for manager deps-edn (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9157746Z DEBUG: Using file pattern: /(^|/)devbox\.json$/ for manager devbox (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9162213Z DEBUG: Using file pattern: /^.devcontainer/devcontainer.json$/ for manager devcontainer (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9164507Z DEBUG: Using file pattern: /^.devcontainer.json$/ for manager devcontainer (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9169912Z DEBUG: Using file pattern: /(^|/)(?:docker-)?compose[^/]*\.ya?ml$/ for manager docker-compose (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9175949Z DEBUG: Using file pattern: /(^|/|\.)([Dd]ocker|[Cc]ontainer)file$/ for manager dockerfile (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9178745Z DEBUG: Using file pattern: /(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/ for manager dockerfile (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9185169Z DEBUG: Using file pattern: /(^|/)\.drone\.yml$/ for manager droneci (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9190407Z DEBUG: Using file pattern: /(^|/)fleet\.ya?ml/ for manager fleet (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9197698Z DEBUG: Using file pattern: /(?:^|/)gotk-components\.ya?ml$/ for manager flux (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9204124Z DEBUG: Using file pattern: /(^|/)\.fvm/fvm_config\.json$/ for manager fvm (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9206124Z DEBUG: Using file pattern: /(^|/)\.fvmrc$/ for manager fvm (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9212749Z DEBUG: Using file pattern: /(^|/)\.gitmodules$/ for manager git-submodules (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9218145Z DEBUG: Using file pattern: /(^|/)(workflow-templates|\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\.ya?ml$/ for manager github-actions (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9221399Z DEBUG: Using file pattern: /(^|/)action\.ya?ml$/ for manager github-actions (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9228596Z DEBUG: Using file pattern: /\.gitlab-ci\.ya?ml$/ for manager gitlabci (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9235439Z DEBUG: Using file pattern: /\.gitlab-ci\.ya?ml$/ for manager gitlabci-include (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9244212Z DEBUG: Using file pattern: /(^|/)gleam.toml$/ for manager gleam (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9251702Z DEBUG: Using file pattern: /(^|/)go\.mod$/ for manager gomod (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9258449Z DEBUG: Using file pattern: /\.gradle(\.kts)?$/ for manager gradle (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9264751Z DEBUG: Using file pattern: /(^|/)gradle\.properties$/ for manager gradle (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9267007Z DEBUG: Using file pattern: /(^|/)gradle/.+\.toml$/ for manager gradle (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9272088Z DEBUG: Using file pattern: /(^|/)buildSrc/.+\.kt$/ for manager gradle (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9274512Z DEBUG: Using file pattern: /\.versions\.toml$/ for manager gradle (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9276231Z DEBUG: Using file pattern: /(^|/)versions.props$/ for manager gradle (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9277764Z DEBUG: Using file pattern: /(^|/)versions.lock$/ for manager gradle (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9292375Z DEBUG: Using file pattern: /(^|/)gradle/wrapper/gradle-wrapper\.properties$/ for manager gradle-wrapper (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9298581Z DEBUG: Using file pattern: /\.cabal$/ for manager haskell-cabal (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9307682Z DEBUG: Using file pattern: /(^|/)requirements\.ya?ml$/ for manager helm-requirements (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9314013Z DEBUG: Using file pattern: /(^|/)values\.ya?ml$/ for manager helm-values (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9323060Z DEBUG: Using file pattern: /(^|/)helmfile\.ya?ml(?:\.gotmpl)?$/ for manager helmfile (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9325069Z DEBUG: Using file pattern: /(^|/)helmfile\.d/.+\.ya?ml(?:\.gotmpl)?$/ for manager helmfile (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9335936Z DEBUG: Using file pattern: /(^|/)Chart\.ya?ml$/ for manager helmv3 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9341708Z DEBUG: Using file pattern: /(^|/)bin/hermit$/ for manager hermit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9349131Z DEBUG: Using file pattern: /^Formula/[^/]+[.]rb$/ for manager homebrew (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9361135Z DEBUG: Using file pattern: /\.html?$/ for manager html (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9363427Z DEBUG: Using file pattern: /(^|/)plugins\.(txt|ya?ml)$/ for manager jenkins (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9373413Z DEBUG: Using file pattern: /(^|/)jsonnetfile\.json$/ for manager jsonnet-bundler (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9375349Z DEBUG: Using file pattern: /^.+\.main\.kts$/ for manager kotlin-script (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9384063Z DEBUG: Using file pattern: /(^|/)kustomization\.ya?ml$/ for manager kustomize (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9389715Z DEBUG: Using file pattern: /(^|/)project\.clj$/ for manager leiningen (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9396032Z DEBUG: Using file pattern: /(^|/|\.)pom\.xml$/ for manager maven (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9400937Z DEBUG: Using file pattern: /^(((\.mvn)|(\.m2))/)?settings\.xml$/ for manager maven (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9402699Z DEBUG: Using file pattern: /(^|/)\.mvn/extensions\.xml$/ for manager maven (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9410376Z DEBUG: Using file pattern: /(^|\/).mvn/wrapper/maven-wrapper.properties$/ for manager maven-wrapper (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9412947Z DEBUG: Using file pattern: /(^|\/)mvnw(.cmd)?$/ for manager maven-wrapper (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9422786Z DEBUG: Using file pattern: /(^|/)package\.js$/ for manager meteor (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9424770Z DEBUG: Using file pattern: /(^|/)Mintfile$/ for manager mint (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9431764Z DEBUG: Using file pattern: /(^|/)\.?mise\.toml$/ for manager mise (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9433851Z DEBUG: Using file pattern: /(^|/)\.?mise/config\.toml$/ for manager mise (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9439732Z DEBUG: Using file pattern: /(^|/)mix\.exs$/ for manager mix (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9445562Z DEBUG: Using file pattern: /(^|/)flake\.nix$/ for manager nix (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9451798Z DEBUG: Using file pattern: /(^|/)\.node-version$/ for manager nodenv (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9459395Z DEBUG: Using file pattern: /(^|/)package\.json$/ for manager npm (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9462719Z DEBUG: Using file pattern: /(^|/)pnpm-workspace\.yaml$/ for manager npm (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9464645Z DEBUG: Using file pattern: /(^|/)\.yarnrc\.yml$/ for manager npm (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9469290Z DEBUG: Using file pattern: /\.(?:cs|fs|vb)proj$/ for manager nuget (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9472399Z DEBUG: Using file pattern: /\.(?:props|targets)$/ for manager nuget (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9475765Z DEBUG: Using file pattern: /(^|/)dotnet-tools\.json$/ for manager nuget (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9477814Z DEBUG: Using file pattern: /(^|/)global\.json$/ for manager nuget (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9485401Z DEBUG: Using file pattern: /(^|/)\.nvmrc$/ for manager nvm (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9495419Z DEBUG: Using file pattern: /(^|/)src/main/features/.+\.json$/ for manager osgi (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9507529Z DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager pep621 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9520386Z DEBUG: Using file pattern: /(^|/)[\w-]*requirements([-.]\w+)?\.(txt|pip)$/ for manager pip_requirements (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9526365Z DEBUG: Using file pattern: /(^|/)setup\.py$/ for manager pip_setup (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9532177Z DEBUG: Using file pattern: /(^|/)Pipfile$/ for manager pipenv (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9538027Z DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager pixi (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9541372Z DEBUG: Using file pattern: /(^|/)pixi\.toml$/ for manager pixi (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9546644Z DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager poetry (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9554514Z DEBUG: Using file pattern: /(^|/)\.pre-commit-config\.ya?ml$/ for manager pre-commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9561945Z DEBUG: Using file pattern: /(^|/)pubspec\.ya?ml$/ for manager pub (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9568733Z DEBUG: Using file pattern: /(^|/)Puppetfile$/ for manager puppet (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9594765Z DEBUG: Using file pattern: /(^|/)\.python-version$/ for manager pyenv (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9596758Z DEBUG: Using file pattern: /.+\.container$/ for manager quadlet (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9598417Z DEBUG: Using file pattern: /.+\.image$/ for manager quadlet (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9600692Z DEBUG: Using file pattern: /.+\.volume$/ for manager quadlet (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9602738Z DEBUG: Using file pattern: renovate.json for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9605181Z DEBUG: Using file pattern: renovate.json5 for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9607817Z DEBUG: Using file pattern: .github/renovate.json for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9610754Z DEBUG: Using file pattern: .github/renovate.json5 for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9613818Z DEBUG: Using file pattern: .gitlab/renovate.json for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9619150Z DEBUG: Using file pattern: .gitlab/renovate.json5 for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9622015Z DEBUG: Using file pattern: .renovaterc for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9628195Z DEBUG: Using file pattern: .renovaterc.json for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9631084Z DEBUG: Using file pattern: .renovaterc.json5 for manager renovate-config-presets (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9639672Z DEBUG: Using file pattern: /(^|/)\.ruby-version$/ for manager ruby-version (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9645915Z DEBUG: Using file pattern: /(^|/)runtime.txt$/ for manager runtime-version (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9654268Z DEBUG: Using file pattern: /\.sbt$/ for manager sbt (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9660402Z DEBUG: Using file pattern: /project/[^/]*\.scala$/ for manager sbt (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9662329Z DEBUG: Using file pattern: /project/build\.properties$/ for manager sbt (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9665503Z DEBUG: Using file pattern: /(^|/)repositories$/ for manager sbt (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9669211Z DEBUG: Using file pattern: /(^|/)\.scalafmt.conf$/ for manager scalafmt (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9676952Z DEBUG: Using file pattern: /(^|/)setup\.cfg$/ for manager setup-cfg (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9695434Z DEBUG: Using file pattern: /(^|/)Package\.swift/ for manager swift (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9697645Z DEBUG: Using file pattern: **/*.tf for manager terraform (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9700737Z DEBUG: Using file pattern: **/*.tofu for manager terraform (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9710634Z DEBUG: Using file pattern: /(^|/)\.terraform-version$/ for manager terraform-version (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9718234Z DEBUG: Using file pattern: /(^|/)terragrunt\.hcl$/ for manager terragrunt (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9726423Z DEBUG: Using file pattern: /(^|/)\.terragrunt-version$/ for manager terragrunt-version (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9734165Z DEBUG: Using file pattern: /\.tflint\.hcl$/ for manager tflint-plugin (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9741947Z DEBUG: Using file pattern: /^\.travis\.ya?ml$/ for manager travis (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9783021Z DEBUG: Using file pattern: /\.typ$/ for manager typst (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9785006Z DEBUG: Using file pattern: **/ProjectSettings/ProjectVersion.txt for manager unity3d (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9787485Z DEBUG: Using file pattern: /(^|/)\.vela\.ya?ml$/ for manager velaci (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9792759Z DEBUG: Using file pattern: /(^|/)vendir\.yml$/ for manager vendir (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9797417Z DEBUG: Using file pattern: /^\.woodpecker(?:/[^/]+)?\.ya?ml$/ for manager woodpecker (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9799620Z DEBUG: Matched 1 file(s) for manager github-actions: .github/workflows/renovate.yml (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9801867Z DEBUG: Matched 1 file(s) for manager maven: pom.xml (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:52.9803788Z DEBUG: Matched 1 file(s) for manager renovate-config-presets: renovate.json (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0001132Z DEBUG: manager extract durations (ms) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0003967Z        "managers": {"maven": 6, "renovate-config-presets": 5, "github-actions": 21}
+2026-05-29T09:08:53.0013990Z DEBUG: Found github-actions package files (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0015645Z DEBUG: Found maven package files (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0017144Z DEBUG: Found 2 package file(s) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0018612Z  INFO: Dependency extraction complete (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0019771Z        "stats": {
+2026-05-29T09:08:53.0020384Z          "managers": {
+2026-05-29T09:08:53.0021416Z            "github-actions": {"fileCount": 1, "depCount": 3},
+2026-05-29T09:08:53.0022268Z            "maven": {"fileCount": 1, "depCount": 1}
+2026-05-29T09:08:53.0023003Z          },
+2026-05-29T09:08:53.0023616Z          "total": {"fileCount": 2, "depCount": 4}
+2026-05-29T09:08:53.0024355Z        }
+2026-05-29T09:08:53.0025328Z DEBUG: baseBranch: main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0119977Z DEBUG: Looking up org.apache.commons:commons-lang3 in repository https://repo.maven.apache.org/maven2/ (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0130275Z DEBUG: hostRules: no authentication for repo.maven.apache.org (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0162097Z DEBUG: Using queue: host=repo.maven.apache.org, concurrency=16 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0405263Z DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/maven-metadata.xml (etag=W/"cc1d9ee31ff9ed6e77a43ca652c19375", lastModified=Sun, 16 Nov 2025 12:55:35 GMT) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0551297Z DEBUG: Found 26 new releases for org.apache.commons:commons-lang3 in repository https://repo.maven.apache.org/maven2/ (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.0768240Z DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.pom (etag=W/"939bd6b97e08be5545b51e1dc2831979", lastModified=Wed, 12 Nov 2025 20:08:07 GMT) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.1032312Z DEBUG: Setting respectLatest=false for maven org.apache.commons:commons-lang3 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:08:53.1346168Z DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom (etag=W/"51f828b51a27ae904e020f679d8f8ce0", lastModified=Fri, 26 Feb 2021 20:40:52 GMT) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1475562Z DEBUG: PackageFiles.add() - Package file saved for base branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1477720Z DEBUG: Package releases lookups complete (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1488023Z DEBUG: Repository libYears (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1511973Z        "libYears": {
+2026-05-29T09:09:11.1512519Z          "managers": {
+2026-05-29T09:09:11.1512951Z            "github-actions": 0.6925067541856925,
+2026-05-29T09:09:11.1513370Z            "maven": 4.709526731354642
+2026-05-29T09:09:11.1513755Z          },
+2026-05-29T09:09:11.1514076Z          "total": 5.4020334855403345
+2026-05-29T09:09:11.1514423Z        },
+2026-05-29T09:09:11.1514742Z        "dependencyStatus": {"outdated": 3, "total": 4}
+2026-05-29T09:09:11.1515497Z DEBUG: branchifyUpgrades (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1749911Z DEBUG: detectSemanticCommits() (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1751940Z DEBUG: getCommitMessages (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1830221Z DEBUG: semanticCommits: detected "angular" (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1832083Z DEBUG: semanticCommits: enabled (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1845739Z DEBUG: 4 flattened updates found: actions/checkout, renovatebot/github-action, renovatebot/github-action, org.apache.commons:commons-lang3 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1854387Z DEBUG: Returning 4 branch(es) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.1862664Z DEBUG: Branch is not pending, removing pending upgrades (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:11.1951998Z DEBUG: Branch is not pending, removing pending upgrades (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2007198Z DEBUG: Branch is not pending, removing pending upgrades (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:11.2084186Z DEBUG: Branch is not pending, removing pending upgrades (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:11.2130555Z DEBUG: config.repoIsOnboarded=true (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.2149547Z DEBUG: packageFiles with updates (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop)
+2026-05-29T09:09:11.2150505Z        "config": {
+2026-05-29T09:09:11.2151179Z          "github-actions": [
+2026-05-29T09:09:11.2151868Z            {
+2026-05-29T09:09:11.2152228Z              "deps": [
+2026-05-29T09:09:11.2152819Z                {
+2026-05-29T09:09:11.2153241Z                  "depName": "actions/checkout",
+2026-05-29T09:09:11.2153933Z                  "commitMessageTopic": "{{{depName}}} action",
+2026-05-29T09:09:11.2154559Z                  "datasource": "github-tags",
+2026-05-29T09:09:11.2155087Z                  "versioning": "docker",
+2026-05-29T09:09:11.2155567Z                  "depType": "action",
+2026-05-29T09:09:11.2156064Z                  "replaceString": "actions/checkout@v4",
+2026-05-29T09:09:11.2157348Z                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+2026-05-29T09:09:11.2158989Z                  "currentValue": "v4",
+2026-05-29T09:09:11.2159521Z                  "updates": [
+2026-05-29T09:09:11.2159945Z                    {
+2026-05-29T09:09:11.2160341Z                      "bucket": "major",
+2026-05-29T09:09:11.2161457Z                      "newVersion": "v6",
+2026-05-29T09:09:11.2161959Z                      "newValue": "v6",
+2026-05-29T09:09:11.2162522Z                      "releaseTimestamp": "2026-01-09T19:42:23.000Z",
+2026-05-29T09:09:11.2163154Z                      "newVersionAgeInDays": 139,
+2026-05-29T09:09:11.2163692Z                      "newMajor": 6,
+2026-05-29T09:09:11.2164167Z                      "newMinor": null,
+2026-05-29T09:09:11.2164652Z                      "newPatch": null,
+2026-05-29T09:09:11.2165141Z                      "updateType": "major",
+2026-05-29T09:09:11.2165651Z                      "isBreaking": true,
+2026-05-29T09:09:11.2166161Z                      "libYears": 0.15575028538812785,
+2026-05-29T09:09:11.2166863Z                      "branchName": "main/quality/renovate-actions-checkout-6.x"
+2026-05-29T09:09:11.2167529Z                    }
+2026-05-29T09:09:11.2167892Z                  ],
+2026-05-29T09:09:11.2168302Z                  "packageName": "actions/checkout",
+2026-05-29T09:09:11.2168854Z                  "warnings": [],
+2026-05-29T09:09:11.2169442Z                  "sourceUrl": "https://github.com/actions/checkout",
+2026-05-29T09:09:11.2170122Z                  "registryUrl": "https://github.com",
+2026-05-29T09:09:11.2171254Z                  "mostRecentTimestamp": "2026-01-09T19:42:23.000Z",
+2026-05-29T09:09:11.2171911Z                  "currentVersion": "v4",
+2026-05-29T09:09:11.2172782Z                  "currentVersionTimestamp": "2025-11-13T23:20:02.000Z",
+2026-05-29T09:09:11.2173671Z                  "currentVersionAgeInDays": 196,
+2026-05-29T09:09:11.2174227Z                  "isSingleVersion": true,
+2026-05-29T09:09:11.2174725Z                  "fixedVersion": "v4"
+2026-05-29T09:09:11.2175184Z                },
+2026-05-29T09:09:11.2175514Z                {
+2026-05-29T09:09:11.2175960Z                  "depName": "renovatebot/github-action",
+2026-05-29T09:09:11.2176544Z                  "commitMessageTopic": "{{{depName}}} action",
+2026-05-29T09:09:11.2177122Z                  "datasource": "github-tags",
+2026-05-29T09:09:11.2177628Z                  "versioning": "docker",
+2026-05-29T09:09:11.2178113Z                  "depType": "action",
+2026-05-29T09:09:11.2178717Z                  "replaceString": "renovatebot/github-action@v43.0.19",
+2026-05-29T09:09:11.2180083Z                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+2026-05-29T09:09:11.2181618Z                  "currentValue": "v43.0.19",
+2026-05-29T09:09:11.2182116Z                  "updates": [
+2026-05-29T09:09:11.2182534Z                    {
+2026-05-29T09:09:11.2182931Z                      "bucket": "non-major",
+2026-05-29T09:09:11.2183454Z                      "newVersion": "v43.0.20",
+2026-05-29T09:09:11.2183989Z                      "newValue": "v43.0.20",
+2026-05-29T09:09:11.2184556Z                      "releaseTimestamp": "2025-11-03T03:29:06.000Z",
+2026-05-29T09:09:11.2185195Z                      "newVersionAgeInDays": 207,
+2026-05-29T09:09:11.2185725Z                      "newMajor": 43,
+2026-05-29T09:09:11.2186195Z                      "newMinor": 0,
+2026-05-29T09:09:11.2186647Z                      "newPatch": 20,
+2026-05-29T09:09:11.2187099Z                      "updateType": "patch",
+2026-05-29T09:09:11.2187559Z                      "isBreaking": false,
+2026-05-29T09:09:11.2188068Z                      "libYears": 0.019180967782851343,
+2026-05-29T09:09:11.2188824Z                      "branchName": "main/quality/renovate-renovatebot-github-action-43.x"
+2026-05-29T09:09:11.2189540Z                    },
+2026-05-29T09:09:11.2189890Z                    {
+2026-05-29T09:09:11.2190258Z                      "bucket": "major",
+2026-05-29T09:09:11.2191237Z                      "newVersion": "v46.1.14",
+2026-05-29T09:09:11.2191775Z                      "newValue": "v46.1.14",
+2026-05-29T09:09:11.2192338Z                      "releaseTimestamp": "2026-05-11T01:26:47.000Z",
+2026-05-29T09:09:11.2193105Z                      "newVersionAgeInDays": 18,
+2026-05-29T09:09:11.2193607Z                      "newMajor": 46,
+2026-05-29T09:09:11.2194048Z                      "newMinor": 1,
+2026-05-29T09:09:11.2194441Z                      "newPatch": 14,
+2026-05-29T09:09:11.2194847Z                      "updateType": "major",
+2026-05-29T09:09:11.2195274Z                      "isBreaking": true,
+2026-05-29T09:09:11.2195706Z                      "libYears": 0.5367564687975647,
+2026-05-29T09:09:11.2196357Z                      "branchName": "main/quality/renovate-renovatebot-github-action-46.x"
+2026-05-29T09:09:11.2197044Z                    }
+2026-05-29T09:09:11.2197390Z                  ],
+2026-05-29T09:09:11.2197826Z                  "packageName": "renovatebot/github-action",
+2026-05-29T09:09:11.2198379Z                  "warnings": [],
+2026-05-29T09:09:11.2198991Z                  "sourceUrl": "https://github.com/renovatebot/github-action",
+2026-05-29T09:09:11.2199707Z                  "registryUrl": "https://github.com",
+2026-05-29T09:09:11.2200336Z                  "mostRecentTimestamp": "2026-05-11T01:26:47.000Z",
+2026-05-29T09:09:11.2201352Z                  "currentVersion": "v43.0.19",
+2026-05-29T09:09:11.2201992Z                  "currentVersionTimestamp": "2025-10-27T03:27:35.000Z",
+2026-05-29T09:09:11.2202656Z                  "currentVersionAgeInDays": 214,
+2026-05-29T09:09:11.2203200Z                  "isSingleVersion": true,
+2026-05-29T09:09:11.2203703Z                  "fixedVersion": "v43.0.19"
+2026-05-29T09:09:11.2204196Z                },
+2026-05-29T09:09:11.2204545Z                {
+2026-05-29T09:09:11.2204932Z                  "depName": "ubuntu",
+2026-05-29T09:09:11.2205426Z                  "currentValue": "latest",
+2026-05-29T09:09:11.2205991Z                  "replaceString": "ubuntu-latest",
+2026-05-29T09:09:11.2206569Z                  "depType": "github-runner",
+2026-05-29T09:09:11.2207122Z                  "datasource": "github-runners",
+2026-05-29T09:09:11.2207916Z                  "autoReplaceStringTemplate": "{{depName}}-{{newValue}}",
+2026-05-29T09:09:11.2208650Z                  "skipReason": "invalid-version",
+2026-05-29T09:09:11.2209223Z                  "updates": [],
+2026-05-29T09:09:11.2209685Z                  "packageName": "ubuntu"
+2026-05-29T09:09:11.2210137Z                }
+2026-05-29T09:09:11.2210453Z              ],
+2026-05-29T09:09:11.2211136Z              "packageFile": ".github/workflows/renovate.yml"
+2026-05-29T09:09:11.2211699Z            }
+2026-05-29T09:09:11.2211999Z          ],
+2026-05-29T09:09:11.2212285Z          "maven": [
+2026-05-29T09:09:11.2212592Z            {
+2026-05-29T09:09:11.2212899Z              "datasource": "maven",
+2026-05-29T09:09:11.2213334Z              "packageFile": "pom.xml",
+2026-05-29T09:09:11.2213737Z              "deps": [
+2026-05-29T09:09:11.2214069Z                {
+2026-05-29T09:09:11.2214391Z                  "datasource": "maven",
+2026-05-29T09:09:11.2214895Z                  "depName": "org.apache.commons:commons-lang3",
+2026-05-29T09:09:11.2215431Z                  "currentValue": "3.12.0",
+2026-05-29T09:09:11.2215884Z                  "fileReplacePosition": 662,
+2026-05-29T09:09:11.2216472Z                  "registryUrls": ["https://repo.maven.apache.org/maven2"],
+2026-05-29T09:09:11.2217074Z                  "depType": "compile",
+2026-05-29T09:09:11.2217496Z                  "updates": [
+2026-05-29T09:09:11.2217851Z                    {
+2026-05-29T09:09:11.2218190Z                      "bucket": "non-major",
+2026-05-29T09:09:11.2218623Z                      "newVersion": "3.20.0",
+2026-05-29T09:09:11.2219060Z                      "newValue": "3.20.0",
+2026-05-29T09:09:11.2219563Z                      "releaseTimestamp": "2025-11-12T20:08:07.000Z",
+2026-05-29T09:09:11.2220101Z                      "newVersionAgeInDays": 197,
+2026-05-29T09:09:11.2221037Z                      "newMajor": 3,
+2026-05-29T09:09:11.2221478Z                      "newMinor": 20,
+2026-05-29T09:09:11.2221889Z                      "newPatch": 0,
+2026-05-29T09:09:11.2222450Z                      "updateType": "minor",
+2026-05-29T09:09:11.2222892Z                      "isBreaking": false,
+2026-05-29T09:09:11.2223330Z                      "libYears": 4.709526731354642,
+2026-05-29T09:09:11.2224042Z                      "branchName": "main/quality/renovate-org.apache.commons-commons-lang3-3.x"
+2026-05-29T09:09:11.2224729Z                    }
+2026-05-29T09:09:11.2225039Z                  ],
+2026-05-29T09:09:11.2225454Z                  "packageName": "org.apache.commons:commons-lang3",
+2026-05-29T09:09:11.2225986Z                  "versioning": "maven",
+2026-05-29T09:09:11.2226401Z                  "warnings": [],
+2026-05-29T09:09:11.2226993Z                  "sourceUrl": "https://gitbox.apache.org/repos/asf/commons-lang.git",
+2026-05-29T09:09:11.2227782Z                  "registryUrl": "https://repo.maven.apache.org/maven2",
+2026-05-29T09:09:11.2228597Z                  "homepage": "https://commons.apache.org/proper/commons-lang/",
+2026-05-29T09:09:11.2229283Z                  "respectLatest": false,
+2026-05-29T09:09:11.2229761Z                  "currentVersion": "3.12.0",
+2026-05-29T09:09:11.2230356Z                  "currentVersionTimestamp": "2021-02-26T20:40:52.000Z",
+2026-05-29T09:09:11.2231420Z                  "currentVersionAgeInDays": 1917,
+2026-05-29T09:09:11.2231963Z                  "isSingleVersion": true,
+2026-05-29T09:09:11.2232467Z                  "fixedVersion": "3.12.0"
+2026-05-29T09:09:11.2232940Z                }
+2026-05-29T09:09:11.2233282Z              ],
+2026-05-29T09:09:11.2233688Z              "packageFileVersion": "1.0.0-SNAPSHOT"
+2026-05-29T09:09:11.2234203Z            }
+2026-05-29T09:09:11.2234515Z          ]
+2026-05-29T09:09:11.2234828Z        }
+2026-05-29T09:09:11.2235417Z DEBUG: detectSemanticCommits() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2236514Z DEBUG: semanticCommits: returning "enabled" from cache (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2237547Z DEBUG: processRepo() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2239958Z DEBUG: Processing 4 branches: main/quality/renovate-actions-checkout-6.x, main/quality/renovate-org.apache.commons-commons-lang3-3.x, main/quality/renovate-renovatebot-github-action-43.x, main/quality/renovate-renovatebot-github-action-46.x (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2243058Z DEBUG: getBranchPr(main/quality/renovate-renovatebot-github-action-43.x) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2244705Z DEBUG: findPr(main/quality/renovate-renovatebot-github-action-43.x, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2246367Z DEBUG: getBranchPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2248080Z DEBUG: findPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2249705Z DEBUG: getBranchPr(main/quality/renovate-actions-checkout-6.x) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2251432Z DEBUG: findPr(main/quality/renovate-actions-checkout-6.x, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2253069Z DEBUG: getBranchPr(main/quality/renovate-renovatebot-github-action-46.x) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2254822Z DEBUG: findPr(main/quality/renovate-renovatebot-github-action-46.x, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2256138Z DEBUG: 0 PRs are currently open (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2257051Z DEBUG: ConcurrentPRs count = 0 (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2258263Z DEBUG: 0 already existing branches found. (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2259224Z DEBUG: Branches count = 0 (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2260463Z DEBUG: Calculating PRs created so far in this hour currentHourStart=2026-05-29T09:00:00.000Z (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2262237Z DEBUG: 0 PRs have been created so far in this hour. (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2263226Z DEBUG: HourlyPRs count = 0 (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:11.2264676Z DEBUG: syncBranchState() (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2267064Z DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2269814Z DEBUG: getBranchPr(main/quality/renovate-renovatebot-github-action-43.x) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2272832Z DEBUG: findPr(main/quality/renovate-renovatebot-github-action-43.x, undefined, open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2275366Z DEBUG: branchExists=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2277575Z DEBUG: dependencyDashboardCheck=undefined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2329028Z DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2333470Z DEBUG: findPr(main/quality/renovate-renovatebot-github-action-43.x, chore(deps): update renovatebot/github-action action to v43.0.20, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2339744Z DEBUG: findPr(renovate/main/quality/renovate-renovatebot-github-action-43.x, chore(deps): update renovatebot/github-action action to v43.0.20, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2344321Z DEBUG: prAlreadyExisted=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2348055Z DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2350426Z DEBUG: prHourlyLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2352323Z        "limits": [{"depName": "renovatebot/github-action", "prHourlyLimit": 2}]
+2026-05-29T09:09:11.2354181Z DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2356803Z DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2358501Z        "limits": [{"depName": "renovatebot/github-action", "branchConcurrentLimit": null}]
+2026-05-29T09:09:11.2361062Z DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 10. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2363783Z DEBUG: Checking schedule(schedule=at any time, tz=null, now=2026-05-29T09:09:11.234Z) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.2366214Z DEBUG: No schedule defined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.4873840Z DEBUG: http cache: saving https://api.github.com/repos/awrrl/test-renovate-del-orphan/rules/branches/main/develop (etag="762f2649b6e1425bfd845d80d000196c82c78c06679516bef8e2f29fc81b437b", lastModified=undefined) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7296580Z DEBUG: GET https://api.github.com/repos/awrrl/test-renovate-del-orphan/branches/main/develop/protection = (code=ERR_NON_2XX_3XX_RESPONSE, statusCode=403 retryCount=0, duration=240) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7320485Z DEBUG: GitHub failure: Resource not accessible by integration (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7322319Z        "err": {
+2026-05-29T09:09:11.7322702Z          "name": "HTTPError",
+2026-05-29T09:09:11.7323107Z          "code": "ERR_NON_2XX_3XX_RESPONSE",
+2026-05-29T09:09:11.7323380Z          "timings": {
+2026-05-29T09:09:11.7323596Z            "start": 1780045751487,
+2026-05-29T09:09:11.7323851Z            "socket": 1780045751488,
+2026-05-29T09:09:11.7324094Z            "lookup": 1780045751488,
+2026-05-29T09:09:11.7324339Z            "connect": 1780045751488,
+2026-05-29T09:09:11.7324607Z            "secureConnect": 1780045751488,
+2026-05-29T09:09:11.7324860Z            "upload": 1780045751488,
+2026-05-29T09:09:11.7325098Z            "response": 1780045751726,
+2026-05-29T09:09:11.7325349Z            "end": 1780045751727,
+2026-05-29T09:09:11.7325593Z            "phases": {
+2026-05-29T09:09:11.7325801Z              "wait": 1,
+2026-05-29T09:09:11.7326004Z              "dns": 0,
+2026-05-29T09:09:11.7326197Z              "tcp": 0,
+2026-05-29T09:09:11.7326386Z              "tls": 0,
+2026-05-29T09:09:11.7326579Z              "request": 0,
+2026-05-29T09:09:11.7326799Z              "firstByte": 238,
+2026-05-29T09:09:11.7327025Z              "download": 1,
+2026-05-29T09:09:11.7327240Z              "total": 240
+2026-05-29T09:09:11.7327444Z            }
+2026-05-29T09:09:11.7327618Z          },
+2026-05-29T09:09:11.7327833Z          "message": "Response code 403 (Forbidden)",
+2026-05-29T09:09:11.7328919Z          "stack": "HTTPError: Response code 403 (Forbidden)\n    at Request.<anonymous> (/usr/local/renovate/node_modules/.pnpm/got@11.8.6/node_modules/got/dist/source/as-promise/index.js:118:42)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
+2026-05-29T09:09:11.7329941Z          "options": {
+2026-05-29T09:09:11.7330154Z            "headers": {
+2026-05-29T09:09:11.7330524Z              "user-agent": "RenovateBot/41.173.1 (https://github.com/renovatebot/renovate)",
+2026-05-29T09:09:11.7331275Z              "accept": "application/json, application/vnd.github.machine-man-preview+json",
+2026-05-29T09:09:11.7331703Z              "authorization": "***********",
+2026-05-29T09:09:11.7331991Z              "accept-encoding": "gzip, deflate, br"
+2026-05-29T09:09:11.7332261Z            },
+2026-05-29T09:09:11.7332682Z            "url": "https://api.github.com/repos/awrrl/test-renovate-del-orphan/branches/main/develop/protection",
+2026-05-29T09:09:11.7333171Z            "hostType": "github",
+2026-05-29T09:09:11.7333416Z            "username": "",
+2026-05-29T09:09:11.7333652Z            "password": "",
+2026-05-29T09:09:11.7334113Z            "method": "GET",
+2026-05-29T09:09:11.7334346Z            "http2": false
+2026-05-29T09:09:11.7334556Z          },
+2026-05-29T09:09:11.7334741Z          "response": {
+2026-05-29T09:09:11.7335089Z            "statusCode": 403,
+2026-05-29T09:09:11.7335329Z            "statusMessage": "Forbidden",
+2026-05-29T09:09:11.7335584Z            "body": {
+2026-05-29T09:09:11.7335842Z              "message": "Resource not accessible by integration",
+2026-05-29T09:09:11.7336391Z              "documentation_url": "https://docs.github.com/rest/branches/branch-protection#get-branch-protection",
+2026-05-29T09:09:11.7336882Z              "status": "403"
+2026-05-29T09:09:11.7337150Z            },
+2026-05-29T09:09:11.7337360Z            "headers": {
+2026-05-29T09:09:11.7337669Z              "date": "Fri, 29 May 2026 09:09:11 GMT",
+2026-05-29T09:09:11.7338336Z              "content-type": "application/json; charset=utf-8",
+2026-05-29T09:09:11.7339369Z              "x-github-media-type": "github.v3; param=machine-man-preview",
+2026-05-29T09:09:11.7340414Z              "x-accepted-github-permissions": "administration=read",
+2026-05-29T09:09:11.7341723Z              "x-github-api-version-selected": "2022-11-28",
+2026-05-29T09:09:11.7345081Z              "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+2026-05-29T09:09:11.7348383Z              "access-control-allow-origin": "*",
+2026-05-29T09:09:11.7349490Z              "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+2026-05-29T09:09:11.7350586Z              "x-frame-options": "deny",
+2026-05-29T09:09:11.7351476Z              "x-content-type-options": "nosniff",
+2026-05-29T09:09:11.7352140Z              "x-xss-protection": "0",
+2026-05-29T09:09:11.7352928Z              "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+2026-05-29T09:09:11.7353873Z              "content-security-policy": "default-src 'none'",
+2026-05-29T09:09:11.7354537Z              "vary": "Accept-Encoding, Accept, X-Requested-With",
+2026-05-29T09:09:11.7355090Z              "content-encoding": "gzip",
+2026-05-29T09:09:11.7355568Z              "transfer-encoding": "chunked",
+2026-05-29T09:09:11.7356035Z              "server": "github.com",
+2026-05-29T09:09:11.7356516Z              "x-ratelimit-limit": "5000",
+2026-05-29T09:09:11.7357011Z              "x-ratelimit-remaining": "4996",
+2026-05-29T09:09:11.7357579Z              "x-ratelimit-reset": "1780049330",
+2026-05-29T09:09:11.7358069Z              "x-ratelimit-used": "4",
+2026-05-29T09:09:11.7358539Z              "x-ratelimit-resource": "core",
+2026-05-29T09:09:11.7359144Z              "x-github-request-id": "2440:2415:43BEE48:4489DBB:6A1957B7"
+2026-05-29T09:09:11.7359720Z            },
+2026-05-29T09:09:11.7360057Z            "httpVersion": "1.1",
+2026-05-29T09:09:11.7360476Z            "retryCount": 0
+2026-05-29T09:09:11.7361077Z          }
+2026-05-29T09:09:11.7361387Z        }
+2026-05-29T09:09:11.7362927Z DEBUG: Branch protection: Do not have permissions to detect branch-protection for main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7364861Z DEBUG: Converting rebaseWhen=auto to rebaseWhen=conflicted because no rule for behind-base-branch applies (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7366245Z DEBUG: Branch needs creating (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7367597Z DEBUG: Using reuseExistingBranch: false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7369470Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7524158Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7525694Z        "branchName": "main/develop",
+2026-05-29T09:09:11.7526515Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:11.7526986Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:11.7599780Z DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7681879Z DEBUG: Starting search at index 691 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7683975Z        "depName": "renovatebot/github-action"
+2026-05-29T09:09:11.7686343Z DEBUG: Found match at index 691 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7688863Z        "depName": "renovatebot/github-action"
+2026-05-29T09:09:11.7737187Z DEBUG: Contents updated (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7738562Z        "depName": "renovatebot/github-action"
+2026-05-29T09:09:11.7739845Z DEBUG: updateArtifacts for updatedPackageFiles (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7746724Z DEBUG: Updated 1 package files (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7754170Z DEBUG: No updated lock files in branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7764566Z DEBUG: 1 file(s) to commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7771351Z DEBUG: Preparing files for committing to branch main/quality/renovate-renovatebot-github-action-43.x (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.7774340Z DEBUG: Setting git author name: github-actions[bot] (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:11.8339425Z DEBUG: Setting git author email: 41898282+github-actions[bot]@users.noreply.github.com (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:12.0264372Z DEBUG: git commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:12.0265706Z        "deletedFiles": [],
+2026-05-29T09:09:12.0266123Z        "ignoredFiles": [],
+2026-05-29T09:09:12.0266543Z        "result": {
+2026-05-29T09:09:12.0266890Z          "author": null,
+2026-05-29T09:09:12.0267454Z          "branch": "main/quality/renovate-renovatebot-github-action-43.x",
+2026-05-29T09:09:12.0268181Z          "commit": "cff4fb4121f3713f5f69e62ec3ac69176f1a27dd",
+2026-05-29T09:09:12.0268699Z          "root": false,
+2026-05-29T09:09:12.0269169Z          "summary": {"changes": 1, "insertions": 1, "deletions": 1}
+2026-05-29T09:09:12.0269713Z        }
+2026-05-29T09:09:13.2966430Z DEBUG: Platform-native commit: unknown error (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:13.2967841Z        "branchName": "main/quality/renovate-renovatebot-github-action-43.x",
+2026-05-29T09:09:13.2968328Z        "err": {
+2026-05-29T09:09:13.2968572Z          "task": {
+2026-05-29T09:09:13.2968824Z            "commands": [
+2026-05-29T09:09:13.2969092Z              "push",
+2026-05-29T09:09:13.2969349Z              "--force",
+2026-05-29T09:09:13.2969600Z              "origin",
+2026-05-29T09:09:13.2970070Z              "refs/renovate/branches/main/quality/renovate-renovatebot-github-action-43.x",
+2026-05-29T09:09:13.2970608Z              "--verbose",
+2026-05-29T09:09:13.2971319Z              "--porcelain"
+2026-05-29T09:09:13.2971683Z            ],
+2026-05-29T09:09:13.2971927Z            "format": "utf-8",
+2026-05-29T09:09:13.2972196Z            "parser": "[function]"
+2026-05-29T09:09:13.2972437Z          },
+2026-05-29T09:09:13.2974594Z          "message": "To https://github.com/awrrl/test-renovate-del-orphan.git\n!\trefs/renovate/branches/main/quality/renovate-renovatebot-github-action-43.x:refs/renovate/branches/main/quality/renovate-renovatebot-github-action-43.x\t[remote rejected] (refusing to allow a GitHub App to create or update workflow `.github/workflows/renovate.yml` without `workflows` permission)\nDone\nPushing to https://github.com/awrrl/test-renovate-del-orphan.git\nPOST git-receive-pack (694 bytes)\nerror: failed to push some refs to 'https://github.com/awrrl/test-renovate-del-orphan.git'\n",
+2026-05-29T09:09:13.2980049Z          "stack": "Error: To https://**redacted**@3.29.0/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)\n    at PluginStore.exec (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)\n    at /usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42\n    at new Promise (<anonymous>)\n    at GitExecutorChain.handleTaskData (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)\n    at GitExecutorChain.attemptRemoteTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at GitExecutorChain.attemptTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:61:18)"
+2026-05-29T09:09:13.2983893Z        }
+2026-05-29T09:09:13.2984574Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:13.3145146Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-43.x)
+2026-05-29T09:09:13.3146754Z        "branchName": "main/develop",
+2026-05-29T09:09:13.3147306Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:13.3147951Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:13.3211941Z DEBUG: syncBranchState() (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3215136Z DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3218069Z DEBUG: getBranchPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3226327Z DEBUG: findPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x, undefined, open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3230118Z DEBUG: branchExists=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3233224Z DEBUG: dependencyDashboardCheck=undefined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3235810Z DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3238969Z DEBUG: findPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x, chore(deps): update dependency org.apache.commons:commons-lang3 to v3.20.0, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3242968Z DEBUG: findPr(renovate/main/quality/renovate-org.apache.commons-commons-lang3-3.x, chore(deps): update dependency org.apache.commons:commons-lang3 to v3.20.0, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3245916Z DEBUG: prAlreadyExisted=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3248163Z DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3250588Z DEBUG: prHourlyLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3253181Z        "limits": [{"depName": "org.apache.commons:commons-lang3", "prHourlyLimit": 2}]
+2026-05-29T09:09:13.3255109Z DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3257620Z DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3259314Z        "limits": [{"depName": "org.apache.commons:commons-lang3", "branchConcurrentLimit": null}]
+2026-05-29T09:09:13.3261477Z DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 10. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3264581Z DEBUG: Checking schedule(schedule=at any time, tz=null, now=2026-05-29T09:09:13.322Z) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3266028Z DEBUG: No schedule defined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3267444Z DEBUG: Converting rebaseWhen=auto to rebaseWhen=conflicted because no rule for behind-base-branch applies (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3268861Z DEBUG: Branch needs creating (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3270260Z DEBUG: Using reuseExistingBranch: false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3271857Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3423241Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3424728Z        "branchName": "main/develop",
+2026-05-29T09:09:13.3425238Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:13.3425817Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:13.3489562Z DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3550607Z DEBUG: Updating org.apache.commons:commons-lang3 in pom.xml (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3553774Z DEBUG: updateArtifacts for updatedPackageFiles (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3556285Z DEBUG: Updated 1 package files (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3558700Z DEBUG: No updated lock files in branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3561491Z DEBUG: 1 file(s) to commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.3564407Z DEBUG: Preparing files for committing to branch main/quality/renovate-org.apache.commons-commons-lang3-3.x (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.4940623Z DEBUG: git commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:13.4942274Z        "deletedFiles": [],
+2026-05-29T09:09:13.4942526Z        "ignoredFiles": [],
+2026-05-29T09:09:13.4942758Z        "result": {
+2026-05-29T09:09:13.4942966Z          "author": null,
+2026-05-29T09:09:13.4943343Z          "branch": "main/quality/renovate-org.apache.commons-commons-lang3-3.x",
+2026-05-29T09:09:13.4943821Z          "commit": "a4f50eb5891b957fbf2d2b87df102b2c8b55d0cc",
+2026-05-29T09:09:13.4944144Z          "root": false,
+2026-05-29T09:09:13.4944438Z          "summary": {"changes": 1, "insertions": 1, "deletions": 0}
+2026-05-29T09:09:13.4944801Z        }
+2026-05-29T09:09:16.8677196Z DEBUG: resetToCommit(b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:16.8751024Z DEBUG: Fetching branch main/quality/renovate-org.apache.commons-commons-lang3-3.x (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5334189Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5502920Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5503781Z        "branchName": "main/develop",
+2026-05-29T09:09:17.5504384Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:17.5504774Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:17.5563652Z  INFO: Branch created (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5565263Z        "commitSha": "cb877bb30ecaf58129f5734e8a74ad3c1c85707a"
+2026-05-29T09:09:17.5567424Z DEBUG: Ensuring PR (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5573775Z DEBUG: There are 0 errors and 0 warnings (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5582480Z DEBUG: getBranchPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5585813Z DEBUG: findPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x, undefined, open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5588690Z DEBUG: findPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x, undefined, closed) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5596427Z DEBUG: Fetching changelog: https://gitbox.apache.org/repos/asf/commons-lang.git (3.12.0 -> 3.20.0) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5599659Z  INFO: Unknown platform, skipping changelog fetching. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5600799Z        "sourceUrl": "https://gitbox.apache.org/repos/asf/commons-lang.git",
+2026-05-29T09:09:17.5601197Z        "hostType": null
+2026-05-29T09:09:17.5890164Z DEBUG: Creating PR (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5894709Z        "prTitle": "chore(deps): update dependency org.apache.commons:commons-lang3 to v3.20.0"
+2026-05-29T09:09:17.5896606Z DEBUG: prHourlyLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5898069Z        "limits": [{"depName": "org.apache.commons:commons-lang3", "prHourlyLimit": 2}]
+2026-05-29T09:09:17.5899170Z DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5900955Z DEBUG: prConcurrentLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5901985Z        "limits": [{"depName": "org.apache.commons:commons-lang3", "prConcurrentLimit": 10}]
+2026-05-29T09:09:17.5903096Z DEBUG: Calculated lowest prConcurrentLimit among the upgrades present in this branch is 10. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5904463Z DEBUG: Creating PR (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.5905291Z        "title": "chore(deps): update dependency org.apache.commons:commons-lang3 to v3.20.0",
+2026-05-29T09:09:17.5906105Z        "head": "awrrl:main/quality/renovate-org.apache.commons-commons-lang3-3.x",
+2026-05-29T09:09:17.5906522Z        "base": "main/develop",
+2026-05-29T09:09:17.5906755Z        "draft": false
+2026-05-29T09:09:17.7844461Z DEBUG: POST https://api.github.com/repos/awrrl/test-renovate-del-orphan/pulls = (code=ERR_NON_2XX_3XX_RESPONSE, statusCode=403 retryCount=0, duration=192) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.7856715Z DEBUG: Pull request creation error (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.7857829Z        "err": {
+2026-05-29T09:09:17.7858463Z          "name": "HTTPError",
+2026-05-29T09:09:17.7858974Z          "code": "ERR_NON_2XX_3XX_RESPONSE",
+2026-05-29T09:09:17.7859474Z          "timings": {
+2026-05-29T09:09:17.7859864Z            "start": 1780045757590,
+2026-05-29T09:09:17.7860343Z            "socket": 1780045757590,
+2026-05-29T09:09:17.7861029Z            "lookup": 1780045757590,
+2026-05-29T09:09:17.7861483Z            "connect": 1780045757590,
+2026-05-29T09:09:17.7861958Z            "secureConnect": 1780045757590,
+2026-05-29T09:09:17.7862462Z            "upload": 1780045757590,
+2026-05-29T09:09:17.7862918Z            "response": 1780045757782,
+2026-05-29T09:09:17.7863352Z            "end": 1780045757782,
+2026-05-29T09:09:17.7863763Z            "phases": {
+2026-05-29T09:09:17.7864121Z              "wait": 0,
+2026-05-29T09:09:17.7864474Z              "dns": 0,
+2026-05-29T09:09:17.7864820Z              "tcp": 0,
+2026-05-29T09:09:17.7865183Z              "tls": 0,
+2026-05-29T09:09:17.7865558Z              "request": 0,
+2026-05-29T09:09:17.7865971Z              "firstByte": 192,
+2026-05-29T09:09:17.7866405Z              "download": 0,
+2026-05-29T09:09:17.7866895Z              "total": 192
+2026-05-29T09:09:17.7867252Z            }
+2026-05-29T09:09:17.7867549Z          },
+2026-05-29T09:09:17.7867954Z          "message": "Response code 403 (Forbidden)",
+2026-05-29T09:09:17.7869886Z          "stack": "HTTPError: Response code 403 (Forbidden)\n    at Request.<anonymous> (/usr/local/renovate/node_modules/.pnpm/got@11.8.6/node_modules/got/dist/source/as-promise/index.js:118:42)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
+2026-05-29T09:09:17.7872215Z          "options": {
+2026-05-29T09:09:17.7872619Z            "headers": {
+2026-05-29T09:09:17.7873284Z              "user-agent": "RenovateBot/41.173.1 (https://github.com/renovatebot/renovate)",
+2026-05-29T09:09:17.7874365Z              "accept": "application/json, application/vnd.github.machine-man-preview+json",
+2026-05-29T09:09:17.7875185Z              "authorization": "***********",
+2026-05-29T09:09:17.7875738Z              "content-type": "application/json",
+2026-05-29T09:09:17.7876247Z              "content-length": "1270",
+2026-05-29T09:09:17.7876737Z              "accept-encoding": "gzip, deflate, br"
+2026-05-29T09:09:17.7877264Z            },
+2026-05-29T09:09:17.7877869Z            "url": "https://api.github.com/repos/awrrl/test-renovate-del-orphan/pulls",
+2026-05-29T09:09:17.7878630Z            "hostType": "github",
+2026-05-29T09:09:17.7879093Z            "username": "",
+2026-05-29T09:09:17.7879551Z            "password": "",
+2026-05-29T09:09:17.7879946Z            "method": "POST",
+2026-05-29T09:09:17.7880331Z            "http2": false
+2026-05-29T09:09:17.7881170Z          },
+2026-05-29T09:09:17.7881558Z          "response": {
+2026-05-29T09:09:17.7881969Z            "statusCode": 403,
+2026-05-29T09:09:17.7882445Z            "statusMessage": "Forbidden",
+2026-05-29T09:09:17.7882930Z            "body": {
+2026-05-29T09:09:17.7883656Z              "message": "GitHub Actions is not permitted to create or approve pull requests.",
+2026-05-29T09:09:17.7884804Z              "documentation_url": "https://docs.github.com/rest/pulls/pulls#create-a-pull-request",
+2026-05-29T09:09:17.7885643Z              "status": "403"
+2026-05-29T09:09:17.7886070Z            },
+2026-05-29T09:09:17.7886713Z            "headers": {
+2026-05-29T09:09:17.7887161Z              "date": "Fri, 29 May 2026 09:09:17 GMT",
+2026-05-29T09:09:17.7887808Z              "content-type": "application/json; charset=utf-8",
+2026-05-29T09:09:17.7888858Z              "x-github-media-type": "github.v3; param=machine-man-preview",
+2026-05-29T09:09:17.7889669Z              "x-accepted-github-permissions": "pull_requests=write",
+2026-05-29T09:09:17.7890415Z              "x-github-api-version-selected": "2022-11-28",
+2026-05-29T09:09:17.7892435Z              "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+2026-05-29T09:09:17.7893787Z              "access-control-allow-origin": "*",
+2026-05-29T09:09:17.7894227Z              "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+2026-05-29T09:09:17.7894688Z              "x-frame-options": "deny",
+2026-05-29T09:09:17.7894976Z              "x-content-type-options": "nosniff",
+2026-05-29T09:09:17.7895270Z              "x-xss-protection": "0",
+2026-05-29T09:09:17.7895691Z              "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+2026-05-29T09:09:17.7896178Z              "content-security-policy": "default-src 'none'",
+2026-05-29T09:09:17.7896548Z              "vary": "Accept-Encoding, Accept, X-Requested-With",
+2026-05-29T09:09:17.7896871Z              "content-encoding": "gzip",
+2026-05-29T09:09:17.7897150Z              "transfer-encoding": "chunked",
+2026-05-29T09:09:17.7897424Z              "server": "github.com",
+2026-05-29T09:09:17.7897688Z              "x-ratelimit-limit": "5000",
+2026-05-29T09:09:17.7897969Z              "x-ratelimit-remaining": "4994",
+2026-05-29T09:09:17.7898258Z              "x-ratelimit-reset": "1780049354",
+2026-05-29T09:09:17.7898539Z              "x-ratelimit-used": "6",
+2026-05-29T09:09:17.7898807Z              "x-ratelimit-resource": "core",
+2026-05-29T09:09:17.7899142Z              "x-github-request-id": "2440:2415:43C17D0:448C7EA:6A1957BC"
+2026-05-29T09:09:17.7899472Z            },
+2026-05-29T09:09:17.7899673Z            "httpVersion": "1.1",
+2026-05-29T09:09:17.7899914Z            "retryCount": 0
+2026-05-29T09:09:17.7900127Z          }
+2026-05-29T09:09:17.7900300Z        }
+2026-05-29T09:09:17.7901237Z DEBUG: setBranchCommit() (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-org.apache.commons-commons-lang3-3.x)
+2026-05-29T09:09:17.7902299Z DEBUG: syncBranchState() (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7903473Z DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7904784Z DEBUG: getBranchPr(main/quality/renovate-actions-checkout-6.x) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7906085Z DEBUG: findPr(main/quality/renovate-actions-checkout-6.x, undefined, open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7907244Z DEBUG: branchExists=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7908295Z DEBUG: dependencyDashboardCheck=undefined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7909685Z DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7911549Z DEBUG: findPr(main/quality/renovate-actions-checkout-6.x, chore(deps): update actions/checkout action to v6, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7913459Z DEBUG: findPr(renovate/main/quality/renovate-actions-checkout-6.x, chore(deps): update actions/checkout action to v6, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7914794Z DEBUG: prAlreadyExisted=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7915926Z DEBUG: Open PR Count: 0, Existing Branch Count: 1, Hourly PR Count: 0 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7917147Z DEBUG: prHourlyLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7917966Z        "limits": [{"depName": "actions/checkout", "prHourlyLimit": 2}]
+2026-05-29T09:09:17.7918869Z DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7920216Z DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7921398Z        "limits": [{"depName": "actions/checkout", "branchConcurrentLimit": null}]
+2026-05-29T09:09:17.7922378Z DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 10. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7923769Z DEBUG: Checking schedule(schedule=at any time, tz=null, now=2026-05-29T09:09:17.787Z) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7924920Z DEBUG: No schedule defined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7926181Z DEBUG: Converting rebaseWhen=auto to rebaseWhen=conflicted because no rule for behind-base-branch applies (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7927432Z DEBUG: Branch needs creating (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7928472Z DEBUG: Using reuseExistingBranch: false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.7929574Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8068809Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8069920Z        "branchName": "main/develop",
+2026-05-29T09:09:17.8070601Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:17.8071527Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:17.8131436Z DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8202380Z DEBUG: Starting search at index 507 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8203362Z        "depName": "actions/checkout"
+2026-05-29T09:09:17.8206072Z DEBUG: Found match at index 507 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8207176Z        "depName": "actions/checkout"
+2026-05-29T09:09:17.8237973Z DEBUG: Contents updated (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8240082Z        "depName": "actions/checkout"
+2026-05-29T09:09:17.8243125Z DEBUG: updateArtifacts for updatedPackageFiles (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8244745Z DEBUG: Updated 1 package files (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8247114Z DEBUG: No updated lock files in branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8249169Z DEBUG: 1 file(s) to commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.8251517Z DEBUG: Preparing files for committing to branch main/quality/renovate-actions-checkout-6.x (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.9619944Z DEBUG: git commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:17.9620944Z        "deletedFiles": [],
+2026-05-29T09:09:17.9621312Z        "ignoredFiles": [],
+2026-05-29T09:09:17.9621547Z        "result": {
+2026-05-29T09:09:17.9621788Z          "author": null,
+2026-05-29T09:09:17.9622105Z          "branch": "main/quality/renovate-actions-checkout-6.x",
+2026-05-29T09:09:17.9622517Z          "commit": "68ee1de2c8c2f60fe8179c939d3ca561aa593707",
+2026-05-29T09:09:17.9622865Z          "root": false,
+2026-05-29T09:09:17.9623160Z          "summary": {"changes": 1, "insertions": 1, "deletions": 1}
+2026-05-29T09:09:17.9623502Z        }
+2026-05-29T09:09:19.1945083Z DEBUG: Platform-native commit: unknown error (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:19.1946446Z        "branchName": "main/quality/renovate-actions-checkout-6.x",
+2026-05-29T09:09:19.1946995Z        "err": {
+2026-05-29T09:09:19.1947289Z          "task": {
+2026-05-29T09:09:19.1947616Z            "commands": [
+2026-05-29T09:09:19.1947969Z              "push",
+2026-05-29T09:09:19.1948305Z              "--force",
+2026-05-29T09:09:19.1948639Z              "origin",
+2026-05-29T09:09:19.1949203Z              "refs/renovate/branches/main/quality/renovate-actions-checkout-6.x",
+2026-05-29T09:09:19.1949827Z              "--verbose",
+2026-05-29T09:09:19.1950183Z              "--porcelain"
+2026-05-29T09:09:19.1950539Z            ],
+2026-05-29T09:09:19.1951328Z            "format": "utf-8",
+2026-05-29T09:09:19.1951731Z            "parser": "[function]"
+2026-05-29T09:09:19.1952109Z          },
+2026-05-29T09:09:19.1954788Z          "message": "To https://github.com/awrrl/test-renovate-del-orphan.git\n!\trefs/renovate/branches/main/quality/renovate-actions-checkout-6.x:refs/renovate/branches/main/quality/renovate-actions-checkout-6.x\t[remote rejected] (refusing to allow a GitHub App to create or update workflow `.github/workflows/renovate.yml` without `workflows` permission)\nDone\nPushing to https://github.com/awrrl/test-renovate-del-orphan.git\nPOST git-receive-pack (675 bytes)\nerror: failed to push some refs to 'https://github.com/awrrl/test-renovate-del-orphan.git'\n",
+2026-05-29T09:09:19.1962558Z          "stack": "Error: To https://**redacted**@3.29.0/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)\n    at PluginStore.exec (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)\n    at /usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42\n    at new Promise (<anonymous>)\n    at GitExecutorChain.handleTaskData (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)\n    at GitExecutorChain.attemptRemoteTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at GitExecutorChain.attemptTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:61:18)"
+2026-05-29T09:09:19.1966304Z        }
+2026-05-29T09:09:19.1966948Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:19.2123335Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-actions-checkout-6.x)
+2026-05-29T09:09:19.2124306Z        "branchName": "main/develop",
+2026-05-29T09:09:19.2124624Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:19.2124980Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:19.2188760Z DEBUG: syncBranchState() (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2191976Z DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2195166Z DEBUG: getBranchPr(main/quality/renovate-renovatebot-github-action-46.x) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2198565Z DEBUG: findPr(main/quality/renovate-renovatebot-github-action-46.x, undefined, open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2201588Z DEBUG: branchExists=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2204184Z DEBUG: dependencyDashboardCheck=undefined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2206971Z DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2210398Z DEBUG: findPr(main/quality/renovate-renovatebot-github-action-46.x, chore(deps): update renovatebot/github-action action to v46, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2215832Z DEBUG: findPr(renovate/main/quality/renovate-renovatebot-github-action-46.x, chore(deps): update renovatebot/github-action action to v46, !open) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2217597Z DEBUG: prAlreadyExisted=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2219064Z DEBUG: Open PR Count: 0, Existing Branch Count: 1, Hourly PR Count: 0 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2220367Z DEBUG: prHourlyLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2221721Z        "limits": [{"depName": "renovatebot/github-action", "prHourlyLimit": 2}]
+2026-05-29T09:09:19.2222699Z DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2224112Z DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2225059Z        "limits": [{"depName": "renovatebot/github-action", "branchConcurrentLimit": null}]
+2026-05-29T09:09:19.2226107Z DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 10. (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2227583Z DEBUG: Checking schedule(schedule=at any time, tz=null, now=2026-05-29T09:09:19.220Z) (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2228817Z DEBUG: No schedule defined (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2230167Z DEBUG: Converting rebaseWhen=auto to rebaseWhen=conflicted because no rule for behind-base-branch applies (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2231673Z DEBUG: Branch needs creating (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2232919Z DEBUG: Using reuseExistingBranch: false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2234231Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2387003Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2387947Z        "branchName": "main/develop",
+2026-05-29T09:09:19.2388267Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:19.2388636Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:19.2451033Z DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=false (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2517125Z DEBUG: Starting search at index 691 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2518680Z        "depName": "renovatebot/github-action"
+2026-05-29T09:09:19.2520561Z DEBUG: Found match at index 691 (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2522467Z        "depName": "renovatebot/github-action"
+2026-05-29T09:09:19.2549758Z DEBUG: Contents updated (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, packageFile=.github/workflows/renovate.yml, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2552334Z        "depName": "renovatebot/github-action"
+2026-05-29T09:09:19.2554092Z DEBUG: updateArtifacts for updatedPackageFiles (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2557454Z DEBUG: Updated 1 package files (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2563566Z DEBUG: No updated lock files in branch (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2565565Z DEBUG: 1 file(s) to commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.2567888Z DEBUG: Preparing files for committing to branch main/quality/renovate-renovatebot-github-action-46.x (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.3924563Z DEBUG: git commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:19.3925309Z        "deletedFiles": [],
+2026-05-29T09:09:19.3925580Z        "ignoredFiles": [],
+2026-05-29T09:09:19.3925800Z        "result": {
+2026-05-29T09:09:19.3926002Z          "author": null,
+2026-05-29T09:09:19.3926339Z          "branch": "main/quality/renovate-renovatebot-github-action-46.x",
+2026-05-29T09:09:19.3926775Z          "commit": "c379039b2e7eb99e38ae6b5fe13489418adbfcbc",
+2026-05-29T09:09:19.3927087Z          "root": false,
+2026-05-29T09:09:19.3927371Z          "summary": {"changes": 1, "insertions": 1, "deletions": 0}
+2026-05-29T09:09:19.3927692Z        }
+2026-05-29T09:09:20.6263156Z DEBUG: Platform-native commit: unknown error (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:20.6264871Z        "branchName": "main/quality/renovate-renovatebot-github-action-46.x",
+2026-05-29T09:09:20.6265958Z        "err": {
+2026-05-29T09:09:20.6266504Z          "task": {
+2026-05-29T09:09:20.6266936Z            "commands": [
+2026-05-29T09:09:20.6267367Z              "push",
+2026-05-29T09:09:20.6267677Z              "--force",
+2026-05-29T09:09:20.6267946Z              "origin",
+2026-05-29T09:09:20.6268442Z              "refs/renovate/branches/main/quality/renovate-renovatebot-github-action-46.x",
+2026-05-29T09:09:20.6269062Z              "--verbose",
+2026-05-29T09:09:20.6269354Z              "--porcelain"
+2026-05-29T09:09:20.6269635Z            ],
+2026-05-29T09:09:20.6269892Z            "format": "utf-8",
+2026-05-29T09:09:20.6270175Z            "parser": "[function]"
+2026-05-29T09:09:20.6270455Z          },
+2026-05-29T09:09:20.6273443Z          "message": "To https://github.com/awrrl/test-renovate-del-orphan.git\n!\trefs/renovate/branches/main/quality/renovate-renovatebot-github-action-46.x:refs/renovate/branches/main/quality/renovate-renovatebot-github-action-46.x\t[remote rejected] (refusing to allow a GitHub App to create or update workflow `.github/workflows/renovate.yml` without `workflows` permission)\nDone\nPushing to https://github.com/awrrl/test-renovate-del-orphan.git\nPOST git-receive-pack (696 bytes)\nerror: failed to push some refs to 'https://github.com/awrrl/test-renovate-del-orphan.git'\n",
+2026-05-29T09:09:20.6280594Z          "stack": "Error: To https://**redacted**@3.29.0/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)\n    at PluginStore.exec (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)\n    at /usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42\n    at new Promise (<anonymous>)\n    at GitExecutorChain.handleTaskData (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)\n    at GitExecutorChain.attemptRemoteTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at GitExecutorChain.attemptTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:61:18)"
+2026-05-29T09:09:20.6288180Z        }
+2026-05-29T09:09:20.6289455Z DEBUG: Setting current branch to main/develop (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:20.6446650Z DEBUG: latest commit (repository=awrrl/test-renovate-del-orphan, baseBranch=main/develop, branch=main/quality/renovate-renovatebot-github-action-46.x)
+2026-05-29T09:09:20.6447445Z        "branchName": "main/develop",
+2026-05-29T09:09:20.6447757Z        "latestCommitDate": "2026-05-29T11:08:05+02:00",
+2026-05-29T09:09:20.6448125Z        "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:20.6515380Z DEBUG: getBranchPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:20.6517620Z DEBUG: findPr(main/quality/renovate-org.apache.commons-commons-lang3-3.x, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:20.8817245Z DEBUG: http cache: saving https://api.github.com/repos/awrrl/test-renovate-del-orphan/contents/renovate.json (etag="8929f9ac518b01caa25ef352afb84f047b67f6ed", lastModified=Fri, 29 May 2026 09:08:05 GMT) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0521198Z DEBUG: http cache: Using cached response: https://api.github.com/repos/awrrl/test-renovate-del-orphan/contents/renovate.json from 2026-05-29T09:09:20.880Z (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0529166Z DEBUG: checkConfigMigrationBranch() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0531888Z DEBUG: Config migration needed but config migration is disabled and checkbox not checked or not present. (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0537761Z DEBUG: ensureDependencyDashboard() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0539095Z DEBUG: Closing Dependency Dashboard (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0545037Z DEBUG: checkReconfigureBranch() (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0546559Z DEBUG: No reconfigure branch found (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0547022Z        "reconfigureBranch": "reconfigure"
+2026-05-29T09:09:21.0549836Z DEBUG: Removing any stale branches (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0551192Z DEBUG: config.repoIsOnboarded=true (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0556200Z DEBUG: Branch lists (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0557203Z        "branchList": [
+2026-05-29T09:09:21.0557916Z          "main/quality/renovate-actions-checkout-6.x",
+2026-05-29T09:09:21.0558669Z          "main/quality/renovate-org.apache.commons-commons-lang3-3.x",
+2026-05-29T09:09:21.0559481Z          "main/quality/renovate-renovatebot-github-action-43.x",
+2026-05-29T09:09:21.0560204Z          "main/quality/renovate-renovatebot-github-action-46.x"
+2026-05-29T09:09:21.0561013Z        ],
+2026-05-29T09:09:21.0561356Z        "renovateBranches": [
+2026-05-29T09:09:21.0561769Z          "main/develop",
+2026-05-29T09:09:21.0562510Z          "main/feature/EXAMPLE-123",
+2026-05-29T09:09:21.0563005Z          "main/multi-feature/HEPIC-12345",
+2026-05-29T09:09:21.0563887Z          "main/quality/renovate-org.apache.commons-commons-lang3-3.x"
+2026-05-29T09:09:21.0564470Z        ]
+2026-05-29T09:09:21.0593259Z DEBUG: remainingBranches=main/develop,main/feature/EXAMPLE-123,main/multi-feature/HEPIC-12345 (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0595536Z DEBUG: findPr(main/develop, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.0597076Z DEBUG: branch.isModified(): using git to calculate (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.1173763Z DEBUG: branch.isModified() = false (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.1175613Z DEBUG: setCachedModifiedResult(): Branch cache not present (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:21.1177021Z  INFO: Deleting orphan branch (repository=awrrl/test-renovate-del-orphan, branch=main/develop)
+2026-05-29T09:09:22.0510412Z DEBUG: Git function thrown (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0511336Z        "err": {
+2026-05-29T09:09:22.0511586Z          "task": {
+2026-05-29T09:09:22.0511990Z            "commands": ["push", "--delete", "origin", "main/develop", "--no-verify"],
+2026-05-29T09:09:22.0512653Z            "format": "utf-8",
+2026-05-29T09:09:22.0513146Z            "parser": "[function]"
+2026-05-29T09:09:22.0513632Z          },
+2026-05-29T09:09:22.0515603Z          "message": "To https://github.com/awrrl/test-renovate-del-orphan.git\n ! [remote rejected] main/develop (refusing to delete the current branch: refs/heads/main/develop)\nerror: failed to push some refs to 'https://github.com/awrrl/test-renovate-del-orphan.git'\n",
+2026-05-29T09:09:22.0522467Z          "stack": "Error: To https://**redacted**@3.29.0/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)\n    at PluginStore.exec (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)\n    at /usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42\n    at new Promise (<anonymous>)\n    at GitExecutorChain.handleTaskData (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)\n    at GitExecutorChain.attemptRemoteTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at GitExecutorChain.attemptTask (/usr/local/renovate/node_modules/.pnpm/simple-git@3.29.0/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:61:18)"
+2026-05-29T09:09:22.0527436Z        }
+2026-05-29T09:09:22.0528129Z DEBUG: No remote branch to delete with name: main/develop (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0576278Z DEBUG: No local branch to delete with name: main/develop (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0581171Z DEBUG: findPr(main/feature/EXAMPLE-123, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0582849Z DEBUG: branch.isModified(): using git to calculate (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0642642Z DEBUG: branch.isModified() = true (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0644171Z        "branchName": "main/feature/EXAMPLE-123",
+2026-05-29T09:09:22.0644862Z        "unrecognizedAuthors": ["Goetz.Lohmann@dedalus.com"]
+2026-05-29T09:09:22.0645834Z DEBUG: setCachedModifiedResult(): Branch cache not present (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0647400Z DEBUG: Orphan Branch is modified - skipping branch deletion (repository=awrrl/test-renovate-del-orphan, branch=main/feature/EXAMPLE-123)
+2026-05-29T09:09:22.0651040Z DEBUG: findPr(main/multi-feature/HEPIC-12345, undefined, open) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0652335Z DEBUG: branch.isModified(): using git to calculate (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0707945Z DEBUG: branch.isModified() = true (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0709010Z        "branchName": "main/multi-feature/HEPIC-12345",
+2026-05-29T09:09:22.0709654Z        "unrecognizedAuthors": ["Goetz.Lohmann@dedalus.com"]
+2026-05-29T09:09:22.0712165Z DEBUG: setCachedModifiedResult(): Branch cache not present (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:22.0714963Z DEBUG: Orphan Branch is modified - skipping branch deletion (repository=awrrl/test-renovate-del-orphan, branch=main/multi-feature/HEPIC-12345)
+2026-05-29T09:09:22.0720436Z DEBUG: Cleaning up Renovate refs: refs/renovate/branches/* (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.5911116Z DEBUG: PackageFiles.clear() - Package files deleted (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.5916130Z DEBUG: Branch summary (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.5916859Z        "cacheModified": undefined,
+2026-05-29T09:09:23.5917327Z        "baseBranches": [
+2026-05-29T09:09:23.5917736Z          {
+2026-05-29T09:09:23.5918106Z            "branchName": "main/develop",
+2026-05-29T09:09:23.5918680Z            "sha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8"
+2026-05-29T09:09:23.5919227Z          }
+2026-05-29T09:09:23.5919553Z        ],
+2026-05-29T09:09:23.5919910Z        "branches": [
+2026-05-29T09:09:23.5920270Z          {
+2026-05-29T09:09:23.5920608Z            "automerge": false,
+2026-05-29T09:09:23.5921405Z            "baseBranch": "main/develop",
+2026-05-29T09:09:23.5922053Z            "baseBranchSha": "b0d09a42753d7188b3b9ac1c63d7ea67f8a407b8",
+2026-05-29T09:09:23.5922954Z            "branchName": "main/quality/renovate-org.apache.commons-commons-lang3-3.x",
+2026-05-29T09:09:23.5923848Z            "branchSha": "cb877bb30ecaf58129f5734e8a74ad3c1c85707a",
+2026-05-29T09:09:23.5924470Z            "isModified": false,
+2026-05-29T09:09:23.5924918Z            "isPristine": true
+2026-05-29T09:09:23.5925360Z          }
+2026-05-29T09:09:23.5925658Z        ],
+2026-05-29T09:09:23.5925991Z        "defaultBranch": "main/develop",
+2026-05-29T09:09:23.5926474Z        "inactiveBranches": [
+2026-05-29T09:09:23.5927059Z          "main/quality/renovate-renovatebot-github-action-43.x",
+2026-05-29T09:09:23.5927801Z          "main/quality/renovate-actions-checkout-6.x",
+2026-05-29T09:09:23.5928512Z          "main/quality/renovate-renovatebot-github-action-46.x"
+2026-05-29T09:09:23.5929132Z        ]
+2026-05-29T09:09:23.5929888Z DEBUG: branches info extended (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.5931032Z        "branchesInformation": [
+2026-05-29T09:09:23.5931643Z          {
+2026-05-29T09:09:23.5932218Z            "branchName": "main/quality/renovate-renovatebot-github-action-43.x",
+2026-05-29T09:09:23.5932918Z            "prNo": null,
+2026-05-29T09:09:23.5933941Z            "prTitle": "chore(deps): update renovatebot/github-action action to v43.0.20",
+2026-05-29T09:09:23.5934705Z            "result": "no-work",
+2026-05-29T09:09:23.5935326Z            "upgrades": [
+2026-05-29T09:09:23.5935812Z              {
+2026-05-29T09:09:23.5936319Z                "datasource": "github-tags",
+2026-05-29T09:09:23.5936994Z                "depName": "renovatebot/github-action",
+2026-05-29T09:09:23.5937638Z                "displayPending": "",
+2026-05-29T09:09:23.5938217Z                "fixedVersion": "v43.0.19",
+2026-05-29T09:09:23.5938576Z                "currentVersion": "v43.0.19",
+2026-05-29T09:09:23.5939159Z                "currentValue": "v43.0.19",
+2026-05-29T09:09:23.5939694Z                "newValue": "v43.0.20",
+2026-05-29T09:09:23.5940168Z                "newVersion": "v43.0.20",
+2026-05-29T09:09:23.5940997Z                "packageFile": ".github/workflows/renovate.yml",
+2026-05-29T09:09:23.5941493Z                "updateType": "patch",
+2026-05-29T09:09:23.5942004Z                "packageName": "renovatebot/github-action"
+2026-05-29T09:09:23.5942490Z              }
+2026-05-29T09:09:23.5942799Z            ]
+2026-05-29T09:09:23.5943110Z          },
+2026-05-29T09:09:23.5943411Z          {
+2026-05-29T09:09:23.5944032Z            "branchName": "main/quality/renovate-org.apache.commons-commons-lang3-3.x",
+2026-05-29T09:09:23.5944825Z            "prNo": null,
+2026-05-29T09:09:23.5945818Z            "prTitle": "chore(deps): update dependency org.apache.commons:commons-lang3 to v3.20.0",
+2026-05-29T09:09:23.5946716Z            "result": "error",
+2026-05-29T09:09:23.5947171Z            "prBlockedBy": "Error",
+2026-05-29T09:09:23.5947634Z            "upgrades": [
+2026-05-29T09:09:23.5948309Z              {
+2026-05-29T09:09:23.5948682Z                "datasource": "maven",
+2026-05-29T09:09:23.5949257Z                "depName": "org.apache.commons:commons-lang3",
+2026-05-29T09:09:23.5949867Z                "displayPending": "",
+2026-05-29T09:09:23.5950351Z                "fixedVersion": "3.12.0",
+2026-05-29T09:09:23.5951127Z                "currentVersion": "3.12.0",
+2026-05-29T09:09:23.5951636Z                "currentValue": "3.12.0",
+2026-05-29T09:09:23.5952130Z                "newValue": "3.20.0",
+2026-05-29T09:09:23.5952597Z                "newVersion": "3.20.0",
+2026-05-29T09:09:23.5953100Z                "packageFile": "pom.xml",
+2026-05-29T09:09:23.5953612Z                "updateType": "minor",
+2026-05-29T09:09:23.5954216Z                "packageName": "org.apache.commons:commons-lang3"
+2026-05-29T09:09:23.5954798Z              }
+2026-05-29T09:09:23.5955156Z            ]
+2026-05-29T09:09:23.5955490Z          },
+2026-05-29T09:09:23.5955808Z          {
+2026-05-29T09:09:23.5956350Z            "branchName": "main/quality/renovate-actions-checkout-6.x",
+2026-05-29T09:09:23.5957035Z            "prNo": null,
+2026-05-29T09:09:23.5957589Z            "prTitle": "chore(deps): update actions/checkout action to v6",
+2026-05-29T09:09:23.5958256Z            "result": "no-work",
+2026-05-29T09:09:23.5958690Z            "upgrades": [
+2026-05-29T09:09:23.5959078Z              {
+2026-05-29T09:09:23.5959459Z                "datasource": "github-tags",
+2026-05-29T09:09:23.5959979Z                "depName": "actions/checkout",
+2026-05-29T09:09:23.5960550Z                "displayPending": "",
+2026-05-29T09:09:23.5961297Z                "fixedVersion": "v4",
+2026-05-29T09:09:23.5961792Z                "currentVersion": "v4",
+2026-05-29T09:09:23.5962281Z                "currentValue": "v4",
+2026-05-29T09:09:23.5962756Z                "newValue": "v6",
+2026-05-29T09:09:23.5963211Z                "newVersion": "v6",
+2026-05-29T09:09:23.5963776Z                "packageFile": ".github/workflows/renovate.yml",
+2026-05-29T09:09:23.5964388Z                "updateType": "major",
+2026-05-29T09:09:23.5964899Z                "packageName": "actions/checkout"
+2026-05-29T09:09:23.5965376Z              }
+2026-05-29T09:09:23.5965679Z            ]
+2026-05-29T09:09:23.5966008Z          },
+2026-05-29T09:09:23.5966326Z          {
+2026-05-29T09:09:23.5966810Z            "branchName": "main/quality/renovate-renovatebot-github-action-46.x",
+2026-05-29T09:09:23.5967212Z            "prNo": null,
+2026-05-29T09:09:23.5967556Z            "prTitle": "chore(deps): update renovatebot/github-action action to v46",
+2026-05-29T09:09:23.5967950Z            "result": "no-work",
+2026-05-29T09:09:23.5968199Z            "upgrades": [
+2026-05-29T09:09:23.5968411Z              {
+2026-05-29T09:09:23.5968615Z                "datasource": "github-tags",
+2026-05-29T09:09:23.5968928Z                "depName": "renovatebot/github-action",
+2026-05-29T09:09:23.5969228Z                "displayPending": "",
+2026-05-29T09:09:23.5969489Z                "fixedVersion": "v43.0.19",
+2026-05-29T09:09:23.5969780Z                "currentVersion": "v43.0.19",
+2026-05-29T09:09:23.5970055Z                "currentValue": "v43.0.19",
+2026-05-29T09:09:23.5970311Z                "newValue": "v46.1.14",
+2026-05-29T09:09:23.5970568Z                "newVersion": "v46.1.14",
+2026-05-29T09:09:23.5971293Z                "packageFile": ".github/workflows/renovate.yml",
+2026-05-29T09:09:23.5971905Z                "updateType": "major",
+2026-05-29T09:09:23.5972449Z                "packageName": "renovatebot/github-action"
+2026-05-29T09:09:23.5972986Z              }
+2026-05-29T09:09:23.5973326Z            ]
+2026-05-29T09:09:23.5973660Z          }
+2026-05-29T09:09:23.5973972Z        ]
+2026-05-29T09:09:23.5974836Z DEBUG: Renovate repository PR statistics (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.5975789Z        "stats": {"total": 0, "open": 0, "closed": 0, "merged": 0}
+2026-05-29T09:09:23.5977033Z DEBUG: Repository result: done, status: onboarded, enabled: true, onboarded: true (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.5978660Z DEBUG: repository problems (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.5979417Z        "repoProblems": ["WARN: Found renovate config warnings"]
+2026-05-29T09:09:23.6017192Z DEBUG: Repository timing splits (milliseconds) (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6018338Z        "splits": {"init": 2015, "extract": 193, "lookup": 18214, "onboarding": 1, "update": 9435},
+2026-05-29T09:09:23.6019109Z        "total": 32809
+2026-05-29T09:09:23.6021475Z DEBUG: Package cache statistics (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6022412Z        "get": {"count": 14, "avgMs": 1, "medianMs": 1, "maxMs": 4, "totalMs": 16},
+2026-05-29T09:09:23.6023253Z        "set": {"count": 12, "avgMs": 11, "medianMs": 4, "maxMs": 71, "totalMs": 133}
+2026-05-29T09:09:23.6026586Z DEBUG: Datasource cache statistics (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6027347Z        "maven": {
+2026-05-29T09:09:23.6027755Z          "https://repo.maven.apache.org/maven2": {
+2026-05-29T09:09:23.6028264Z            "hit": 0,
+2026-05-29T09:09:23.6028625Z            "miss": 1,
+2026-05-29T09:09:23.6028983Z            "set": 1,
+2026-05-29T09:09:23.6029333Z            "skip": 0
+2026-05-29T09:09:23.6029670Z          }
+2026-05-29T09:09:23.6029977Z        },
+2026-05-29T09:09:23.6030544Z        "github-tags": {"https://github.com": {"hit": 0, "miss": 0, "set": 0, "skip": 2}}
+2026-05-29T09:09:23.6039583Z DEBUG: HTTP statistics (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6040221Z        "hosts": {
+2026-05-29T09:09:23.6040881Z          "api.github.com": {
+2026-05-29T09:09:23.6041427Z            "count": 46,
+2026-05-29T09:09:23.6042887Z            "reqAvgMs": 490,
+2026-05-29T09:09:23.6043373Z            "reqMedianMs": 461,
+2026-05-29T09:09:23.6043803Z            "reqMaxMs": 944,
+2026-05-29T09:09:23.6044197Z            "queueAvgMs": 0,
+2026-05-29T09:09:23.6044602Z            "queueMedianMs": 0,
+2026-05-29T09:09:23.6044917Z            "queueMaxMs": 1
+2026-05-29T09:09:23.6045288Z          },
+2026-05-29T09:09:23.6045591Z          "repo.maven.apache.org": {
+2026-05-29T09:09:23.6045905Z            "count": 3,
+2026-05-29T09:09:23.6046289Z            "reqAvgMs": 17,
+2026-05-29T09:09:23.6046707Z            "reqMedianMs": 15,
+2026-05-29T09:09:23.6047091Z            "reqMaxMs": 21,
+2026-05-29T09:09:23.6047314Z            "queueAvgMs": 0,
+2026-05-29T09:09:23.6047717Z            "queueMedianMs": 0,
+2026-05-29T09:09:23.6048156Z            "queueMaxMs": 0
+2026-05-29T09:09:23.6048836Z          }
+2026-05-29T09:09:23.6049188Z        },
+2026-05-29T09:09:23.6049501Z        "requests": 49
+2026-05-29T09:09:23.6049850Z DEBUG: HTTP cache statistics (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6051272Z        "https://api.github.com": {
+2026-05-29T09:09:23.6052017Z          "/repos/awrrl/test-renovate-del-orphan/contents/renovate.json": {
+2026-05-29T09:09:23.6052405Z            "hit": 1,
+2026-05-29T09:09:23.6052608Z            "miss": 1
+2026-05-29T09:09:23.6052806Z          },
+2026-05-29T09:09:23.6053110Z          "/repos/awrrl/test-renovate-del-orphan/pulls": {"hit": 0, "miss": 1},
+2026-05-29T09:09:23.6053904Z          "/repos/awrrl/test-renovate-del-orphan/rules/branches/main/develop": {
+2026-05-29T09:09:23.6054280Z            "hit": 0,
+2026-05-29T09:09:23.6054738Z            "miss": 1
+2026-05-29T09:09:23.6055268Z          }
+2026-05-29T09:09:23.6056069Z        },
+2026-05-29T09:09:23.6056410Z        "https://repo.maven.apache.org": {
+2026-05-29T09:09:23.6056839Z          "/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom": {
+2026-05-29T09:09:23.6057236Z            "hit": 0,
+2026-05-29T09:09:23.6057434Z            "miss": 1
+2026-05-29T09:09:23.6057620Z          },
+2026-05-29T09:09:23.6058139Z          "/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.pom": {
+2026-05-29T09:09:23.6058541Z            "hit": 0,
+2026-05-29T09:09:23.6058732Z            "miss": 1,
+2026-05-29T09:09:23.6059061Z            "localHit": 1
+2026-05-29T09:09:23.6059263Z          },
+2026-05-29T09:09:23.6059539Z          "/maven2/org/apache/commons/commons-lang3/maven-metadata.xml": {
+2026-05-29T09:09:23.6060090Z            "hit": 0,
+2026-05-29T09:09:23.6060472Z            "miss": 1
+2026-05-29T09:09:23.6061056Z          }
+2026-05-29T09:09:23.6061384Z        }
+2026-05-29T09:09:23.6062062Z DEBUG: Lookup statistics (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6062914Z        "maven": {"count": 1, "avgMs": 143, "medianMs": 143, "maxMs": 143, "totalMs": 143},
+2026-05-29T09:09:23.6063829Z        "github-tags": {"count": 2, "avgMs": 9538, "medianMs": 18138, "maxMs": 18138, "totalMs": 19075}
+2026-05-29T09:09:23.6064620Z DEBUG: Cache fallback URLs (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6065131Z        "count": 0,
+2026-05-29T09:09:23.6065574Z        "hits": {}
+2026-05-29T09:09:23.6066191Z  INFO: Repository finished (repository=awrrl/test-renovate-del-orphan)
+2026-05-29T09:09:23.6066833Z        "cloned": true,
+2026-05-29T09:09:23.6067199Z        "durationMs": 32809,
+2026-05-29T09:09:23.6067571Z        "result": "done",
+2026-05-29T09:09:23.6067861Z        "status": "onboarded",
+2026-05-29T09:09:23.6068088Z        "enabled": true,
+2026-05-29T09:09:23.6068300Z        "onboarded": true
+2026-05-29T09:09:23.6068563Z DEBUG: Checking file package cache for expired items
+2026-05-29T09:09:23.6381903Z DEBUG: Deleted 0 of 12 file cached entries in 31ms
+2026-05-29T09:09:23.8009179Z Post job cleanup.
+2026-05-29T09:09:23.9017943Z [command]/usr/bin/git version
+2026-05-29T09:09:23.9054517Z git version 2.54.0
+2026-05-29T09:09:23.9098663Z Temporarily overriding HOME='/home/runner/work/_temp/022db835-95d2-4c0d-81b0-62a3f8f79fef' before making global git config changes
+2026-05-29T09:09:23.9100045Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-29T09:09:23.9104922Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test-renovate-del-orphan/test-renovate-del-orphan
+2026-05-29T09:09:23.9142437Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-29T09:09:23.9176325Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-29T09:09:23.9408952Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-29T09:09:23.9435215Z http.https://github.com/.extraheader
+2026-05-29T09:09:23.9449370Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-29T09:09:23.9483331Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-29T09:09:23.9711157Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-29T09:09:23.9745599Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-29T09:09:24.0109192Z Cleaning up orphan processes
+2026-05-29T09:09:24.0543313Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, renovatebot/github-action@v43.0.19. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

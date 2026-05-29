@@ -20,7 +20,7 @@ contains commits from non-Renovate authors. This works in the common case, but t
   repository as a potentially Renovate-managed branch — remains unaddressed.
 
 This reproduction was confirmed against **renovatebot/github-action v43.0.19**
-(Renovate engine ≥ 41.x), well past the 32.83.3 release of the supposed fix.
+(Renovate engine **v41.159.4**), well past the 32.83.3 release of the supposed fix.
 
 ## Current behavior
 
@@ -138,4 +138,4 @@ In particular:
 
 ## Link to the Renovate issue or Discussion
 
-> Will be added once the discussion is created.
+[Orphan deletion still occurs with empty branchPrefix (regression of #15733) and branchName deprecated (how to replace it with additionalBranchPrefix?) · Discussion #43674 · renovatebot/renovate](https://github.com/renovatebot/renovate/discussions/43674)
