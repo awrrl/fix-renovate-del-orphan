@@ -4,6 +4,7 @@
   "branchPrefix": "",
   "additionalBranchPrefix": "",
   "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}",
+  "useBaseBranchConfig": "merge",
   "packageRules": [
     {
       "matchDatasources": [ "maven" ],
