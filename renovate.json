@@ -3,5 +3,6 @@
   "baseBranches": ["400XXXX/develop"],
   "branchPrefix": "",
   "additionalBranchPrefix": "",
-  "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+  "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}",
+  "labels": ["renovate-400XXXX"]
 }
