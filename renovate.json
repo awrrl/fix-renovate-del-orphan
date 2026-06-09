@@ -3,5 +3,8 @@
   "baseBranches": ["main/develop", "400XXXX/develop"],
   "branchPrefix": "",
   "additionalBranchPrefix": "",
-  "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
+  "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}",
+  "labels": ["renovate-main"],
+  "prHourlyLimit": 10,
+  "prConcurrentLimit": 10
 }
