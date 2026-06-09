@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "baseBranches": ["400XXXX/develop"],
-  "branchPrefix": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}",
-  "labels": ["400XXXX/develop"],
-  "useBaseBranchConfig": "none"
+  "branchPrefix": "",
+  "additionalBranchPrefix": "",
+  "branchName": "{{lookup (split baseBranch '/') 0 }}/quality/renovate-{{{branchTopic}}}"
 }
